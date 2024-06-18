@@ -1,0 +1,116 @@
+.team-page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 75px;
+  overflow-x: hidden;
+}
+
+.team-banner {
+  width: 100%;
+  height: 40vh;
+  background-size: 100% 105%;
+}
+.team-banner-text {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+}
+.team-banner-text h2 {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 29px;
+  color: #ffffff;
+  line-height: 40px;
+  padding-left: 8.5rem;
+}
+.team-banner-text h3 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  width: 600px;
+  color: #ffffff;
+  margin-top: 1.5rem;
+  padding-left: 8.5rem;
+}
+.team-page_allSections {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+.team-page_section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.team-page_section h2 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 24px;
+  margin-top: 45px;
+  color: #64008a;
+}
+.team-page_section p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 16px;
+  margin-bottom: 40px;
+  color: #6f6f6f;
+  max-width: 800px;
+}
+
+@media (max-width: 900px) {
+  .team-page_section {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .team-banner {
+    width: 250%;
+    height: 40vh;
+    transform: translateX(-50px);
+  }
+
+  .team-banner-text {
+    margin-left: 50px;
+  }
+
+  .team-banner-text h2 {
+    font-size: 1.25rem;
+    padding-left: 2rem;
+  }
+
+  .team-banner-text h3 {
+    font-size: 0.875rem;
+    width: 330px;
+    color: #ffffff;
+    padding-left: 2rem;
+  }
+
+  .team-page_section h2 {
+    font-size: 1.25rem;
+  }
+
+  .team-page_section p {
+    font-size: 0.875rem;
+    letter-spacing: -0.01em;
+    max-width: 80%;
+  }
+
+  .team-page_section .memberCard-content h4 {
+    font-size: 1.25rem;
+  }
+}

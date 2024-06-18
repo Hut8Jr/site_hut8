@@ -1,0 +1,80 @@
+.projects-page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 75px;
+}
+
+.projects-page h1 {
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 24px;
+  text-align: center;
+  color: #64008a;
+  margin: 45px;
+}
+
+.projects-banner {
+  height: 40vh;
+}
+
+.projects-banner-text {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.projects-banner-text h2 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  color: white;
+  margin: 0px;
+  line-height: 40px;
+  padding-left: 8.5rem;
+}
+
+.projects-banner-text h3 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: white;
+  margin-top: 1.5rem;
+  padding-left: 8.5rem;
+}
+
+@media (max-width: 900px) {
+  .projects-page h1 {
+    font-size: 1.5rem;
+  }
+
+  .projects-banner-text h2 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    padding-left: 2rem;
+  }
+
+  .projects-banner-text h3 {
+    font-size: 0.875rem;
+    padding-left: 2rem;
+  }
+
+  .project-description {
+    max-width: 330px;
+  }
+
+  .project-content .project-description h1 {
+    font-size: 1.25rem;
+  }
+  .project-content .project-description p {
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 150%;
+    text-align: center;
+    color: #6f6f6f;
+  }
+}

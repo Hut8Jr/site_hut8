@@ -1,0 +1,7 @@
+.error-404 {
+  height: 64.2vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #96d600;
+}

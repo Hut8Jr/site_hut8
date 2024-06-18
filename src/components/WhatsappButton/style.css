@@ -1,0 +1,12 @@
+.whatsapp-float {
+  position: fixed;
+  bottom: 12px;
+  right: 14px;
+  width: 48px;
+  height: 48px;
+  z-index: 9999;
+}
+
+.whatsapp-float svg {
+  filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.4));
+}
