@@ -40,20 +40,6 @@ const Footer = ({ urlpath }) => {
           </div>
           <div className={`network-logos ${url}`}>
             <a
-              href="https://twitter.com/huteight"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <TwitterIcon />
-            </a>
-            <a
-              href="https://facebook.com/hutEight/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FacebookIcon />
-            </a>
-            <a
               href="https://www.instagram.com/hut8_jr/"
               target="_blank"
               rel="noreferrer"

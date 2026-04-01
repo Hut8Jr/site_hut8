@@ -10,7 +10,6 @@ const query = graphql`
         name
         role
         board
-        area
         icon {
           gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
         }
@@ -18,6 +17,14 @@ const query = graphql`
     }
   }
 `
+const ordemDiretorias = {
+    "Presidência": 1,
+    "Projetos": 2,
+    "Gestão de Pessoas": 3,
+    "Marketing": 4,
+    "Administrativo e Financeiro": 5
+  };
+
 const MemberDisplay = ({ memberRole }) => {
   const {
     allContentfulMember: { nodes: data },
@@ -28,7 +35,11 @@ const MemberDisplay = ({ memberRole }) => {
     if (memberRole === "Associado" || memberRole === "Professor elo") {
       return a.name.localeCompare(b.name)
     } else {
-      return a.board.localeCompare(b.board)
+      // Pega o número da prioridade. Se a pessoa não tiver diretoria, joga pro final (peso 99)
+      const pesoA = ordemDiretorias[a.board] || 99;
+      const pesoB = ordemDiretorias[b.board] || 99;
+
+      return pesoA - pesoB;
     }
   })
 

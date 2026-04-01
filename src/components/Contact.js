@@ -11,12 +11,12 @@ const Contact = () => {
         <p>para futuros projetos</p>
       </div>
       <div className='contact-text'>
-        <h4>Rafael Mattia - Diretor de Projetos</h4>
+        <h4>Augusto Menchaca - Diretor de Projetos</h4>
         <a
-          href='https://api.whatsapp.com/send?phone=5553991639085'
+          href='https://api.whatsapp.com/send?phone=5553999011310'
           target='_blank'
         >
-          (51) 9296-3600
+          (53) 999011310
         </a>
       </div>
       <div className='contact-text'>

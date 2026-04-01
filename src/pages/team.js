@@ -56,21 +56,21 @@ const Team = () => {
             </p>
             <MemberDisplay memberRole="Diretor" />
           </div>
-          <div className="team-page_section">
+          {/* <div className="team-page_section">
             <h2>Conselheiros</h2>
             <p>
               Auxiliam os diretores no desenvolvimento das tarefas de gestão da
               empresa. Cargo eletivo em modelo semestral.
             </p>
             <MemberDisplay memberRole="Conselheiro" />
-          </div>
-          <div className="team-page_section">
+          </div> */}
+          {/* <div className="team-page_section">
             <h2>Associados</h2>
             <p>
               Atuam nos projetos técnicos e recebem horas de ensino e extensão.
             </p>
             <MemberDisplay memberRole="Associado" />
-          </div>
+          </div> */}
         </div>
       </div>
     </Layout>
