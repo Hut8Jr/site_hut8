@@ -71,6 +71,14 @@ const presidencia = [
     github: "https://github.com/GabrielMartins105",
     linkedin: "https://www.linkedin.com/in/gabriel-martins-7a786926a/",
   },
+  {
+    name: "Amanda Vieira",
+    role: "Gestora de Marketing",
+    description: "Responsável por gerenciar as estratégias de marketing da empresa júnior, fortalecendo sua identidade, comunicação e presença no mercado.",
+    image: "AmandaVieira",
+    github: "https://github.com/Amandamvieira",
+    linkedin: "https://www.linkedin.com/in/amandajmvieira",
+  }
 ];
 
 export default function EquipeSection2() {
@@ -124,17 +132,25 @@ export default function EquipeSection2() {
                       href={pessoa.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-[#6B0F9C] transition-colors"
+                      aria-label={`GitHub de ${pessoa.name}`}
+                      className="group/github flex h-6 items-center gap-0 overflow-hidden rounded-full bg-slate-100 pl-1.5 pr-1.5 text-slate-500 transition-all duration-300 ease-out hover:gap-1.5 hover:bg-violet-100 hover:pr-3 hover:text-violet-700"
                     >
-                      <FiGithub size={20} />
+                      <FiGithub size={20} strokeWidth={1.5} className="shrink-0" />
+                      <span className="max-w-0 overflow-hidden whitespace-nowrap text-[12px] font-semibold opacity-0 transition-all duration-300 ease-out group-hover/github:max-w-[3.5rem] group-hover/github:opacity-100">
+                        GitHub
+                      </span>
                     </a>
                     <a
                       href={pessoa.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-[#6B0F9C] transition-colors"
+                      aria-label={`Linkedin de ${pessoa.name}`}
+                      className="group/linkedin flex h-6 items-center gap-0 overflow-hidden rounded-full bg-slate-100 pl-1.5 pr-1.5 text-slate-500 transition-all duration-300 ease-out hover:gap-1.5 hover:bg-violet-100 hover:pr-3 hover:text-violet-700"
                     >
-                      <CiLinkedin size={20} />
+                      <CiLinkedin size={20} strokeWidth={0.5} className="shrink-0" />
+                      <span className="max-w-0 overflow-hidden whitespace-nowrap text-[12px] font-semibold opacity-0 transition-all duration-300 ease-out group-hover/linkedin:max-w-[3.5rem] group-hover/linkedin:opacity-100">
+                        LinkedIn
+                      </span>
                     </a>
                   </div>
                 </div>
