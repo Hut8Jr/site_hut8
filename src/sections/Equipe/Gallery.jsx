@@ -11,7 +11,7 @@ const images = Object.fromEntries(
   Object.entries(imageModules).map(([path, url]) => {
     const filename = path.split("/").pop().replace(".png", "");
     return [filename, url];
-  })
+  }),
 );
 
 const team = [
@@ -20,14 +20,14 @@ const team = [
     role: "Designer",
     image: "TomasMendes",
     imagePosition: "object-[center_30%]",
-    linkedin: "https://www.linkedin.com/in/tomás-vitorino-mendes-696606380"
+    linkedin: "https://www.linkedin.com/in/tomás-vitorino-mendes-696606380",
   },
   {
     name: "Ruan da Silva Rodrigues",
     role: "Designer",
     image: "RuanRodrigues",
     imagePosition: "object-[center_35%]",
-    linkedin: "https://www.linkedin.com/in/ruanrodrigs"
+    linkedin: "https://www.linkedin.com/in/ruanrodrigs",
   },
   {
     name: "Diego Ruas",
@@ -35,14 +35,14 @@ const team = [
     image: "DiegoRuas",
     imagePosition: "object-[center_10%]",
     github: "https://github.com/diego-ruas",
-    linkedin: "https://www.linkedin.com/in/diegoruas/"
+    linkedin: "https://www.linkedin.com/in/diegoruas/",
   },
   {
     name: "Amanda Schiller",
     role: "Designer",
     image: "AmandaSchiller",
     imagePosition: "object-[center_30%]",
-    linkedin: "https://www.linkedin.com/in/amndasch"
+    linkedin: "https://www.linkedin.com/in/amndasch",
   },
   {
     name: "Victor Reis",
@@ -50,7 +50,7 @@ const team = [
     image: "VictorReis",
     imagePosition: "object-[center_15%]",
     github: "https://github.com/VictorReis18",
-    linkedin: "https://www.linkedin.com/in/victor-reis-a4618523a"
+    linkedin: "https://www.linkedin.com/in/victor-reis-a4618523a",
   },
   {
     name: "Rodrigo Anchieta",
@@ -58,7 +58,7 @@ const team = [
     image: "RodrigoAnchieta",
     imagePosition: "object-[center_90%]",
     github: "https://github.com/Rodrigo-AP-1",
-    linkedin: "https://www.linkedin.com/in/rodrigo-prates-a91568385"
+    linkedin: "https://www.linkedin.com/in/rodrigo-prates-a91568385",
   },
   {
     name: "Pedro Mota",
@@ -66,7 +66,7 @@ const team = [
     image: "PedroMota",
     imagePosition: "object-[center_50%]",
     github: "https://github.com/PMota173",
-    linkedin: "https://www.linkedin.com/in/pedro-mota173"
+    linkedin: "https://www.linkedin.com/in/pedro-mota173",
   },
   {
     name: "Pedro Izkovitz",
@@ -74,7 +74,7 @@ const team = [
     image: "PedroIzkovitz",
     imagePosition: "object-[center_50%]",
     github: "https://github.com/pedroizk",
-    linkedin: "https://www.linkedin.com/in/pedro-izkovitz-89453b264/"
+    linkedin: "https://www.linkedin.com/in/pedro-izkovitz-89453b264/",
   },
   {
     name: "Pedro Mognon",
@@ -82,7 +82,7 @@ const team = [
     image: "PedroMognon",
     imagePosition: "object-[center_50%]",
     github: "https://github.com/PedroMBortoli",
-    linkedin: "https://www.linkedin.com/in/pedrombortoli"
+    linkedin: "https://www.linkedin.com/in/pedrombortoli",
   },
   {
     name: "Matheus Persch",
@@ -90,7 +90,7 @@ const team = [
     image: "MatheusPersch",
     imagePosition: "object-[center_30%]",
     github: "https://github.com/DevTheusP",
-    linkedin: "https://www.linkedin.com/in/matheus-persch/"
+    linkedin: "https://www.linkedin.com/in/matheus-persch/",
   },
   {
     name: "Mariana Ferreira Tica",
@@ -98,7 +98,7 @@ const team = [
     image: "MarianaTica",
     imagePosition: "object-[center_50%]",
     github: "",
-    linkedin: ""
+    linkedin: "",
   },
   {
     name: "Kenzo Takahashi",
@@ -106,7 +106,7 @@ const team = [
     image: "KenzoTakahashi",
     imagePosition: "object-[center_20%]",
     github: "https://github.com/KenzoTakas",
-    linkedin: "https://www.linkedin.com/in/kenzo-da-silva-takahashi-920284426/"
+    linkedin: "https://www.linkedin.com/in/kenzo-da-silva-takahashi-920284426/",
   },
   {
     name: "João Duarte",
@@ -114,7 +114,7 @@ const team = [
     image: "JoaoDuarte",
     imagePosition: "object-[center_80%]",
     github: "https://github.com/joaoMarceloBitar",
-    linkedin: "https://www.linkedin.com/in/jo%C3%A3o-marcelo-bitar-88a470319"
+    linkedin: "https://www.linkedin.com/in/jo%C3%A3o-marcelo-bitar-88a470319",
   },
   {
     name: "Gustavo Brendler",
@@ -122,7 +122,7 @@ const team = [
     image: "GustavoBrendler",
     imagePosition: "object-[center_30%]",
     github: "https://github.com/Brendler17",
-    linkedin: "https://www.linkedin.com/in/gustavo-brendler/"
+    linkedin: "https://www.linkedin.com/in/gustavo-brendler/",
   },
   {
     name: "Enzo Giacomini",
@@ -130,7 +130,7 @@ const team = [
     image: "EnzoGiacomini",
     imagePosition: "object-[center_60%]",
     github: "https://github.com/EnzoGiacomini",
-    linkedin: "https://www.linkedin.com/in/enzogiacomini"
+    linkedin: "https://www.linkedin.com/in/enzogiacomini",
   },
   {
     name: "Cassiano Pessoa",
@@ -138,7 +138,7 @@ const team = [
     image: "CassianoPessoa",
     imagePosition: "object-[center_40%]",
     github: "https://github.com/Caspessoa",
-    linkedin: "https://www.linkedin.com/in/cassiano-pessoa/"
+    linkedin: "https://www.linkedin.com/in/cassiano-pessoa/",
   },
   {
     name: "Augusto Molina",
@@ -146,7 +146,7 @@ const team = [
     image: "AugustoMolina",
     imagePosition: "object-[center_50%]",
     github: "https://github.com/gutormolina",
-    linkedin: "https://www.linkedin.com/in/augusto-molina"
+    linkedin: "https://www.linkedin.com/in/augusto-molina",
   },
   {
     name: "Alan Farias",
@@ -154,7 +154,7 @@ const team = [
     image: "AlanFarias",
     imagePosition: "object-[center_30%]",
     github: "https://github.com/AlanF4rias",
-    linkedin: "https://www.linkedin.com/in/alan-farias-19a028209"
+    linkedin: "https://www.linkedin.com/in/alan-farias-19a028209",
   },
   {
     name: "Manoela Viera",
@@ -162,7 +162,7 @@ const team = [
     image: "ManoelaViera",
     imagePosition: "object-[center_50%]",
     github: "https://github.com/ManoelaV",
-    linkedin: "https://www.linkedin.com/in/manoela-moura-17b332319/"
+    linkedin: "https://www.linkedin.com/in/manoela-moura-17b332319/",
   },
 ];
 
@@ -227,13 +227,16 @@ export default function DevsDesignersSection() {
       <div className="pointer-events-none absolute -right-24 top-8 h-56 w-56 rounded-full bg-violet-100/50 blur-3xl" />
 
       <section className="relative mx-auto max-w-6xl">
-        <header className="mb-8">
-          <h1 className="text-2xl font-extrabold tracking-tight text-violet-700 sm:text-3xl">
-            Desenvolvedores & Designers
-          </h1>
-          <p className="mt-1 text-[10px] font-medium text-slate-400 sm:text-xs">
-            A força criativa por trás de cada linha de código.
-          </p>
+        <header className="flex items-center gap-6 mb-10">
+          <div>
+            <h1 className="text-2xl font-extrabold tracking-tight text-violet-700 sm:text-3xl">
+              Desenvolvedores & Designers
+            </h1>
+            <p className="mt-1 text-[10px] font-medium text-slate-400 sm:text-xs">
+              A força criativa por trás de cada linha de código.
+            </p>
+          </div>
+          <div className="h-px bg-gray-200 w-full"></div>
         </header>
 
         <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-5 lg:gap-6">
