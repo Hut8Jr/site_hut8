@@ -1,0 +1,24 @@
+import React from 'react';
+import './card.css';
+
+export function Card({ icone, titulo, descricao, corFundoIcone, aoClicar}) {
+  return (
+    <div className="estilo-cards">
+      
+      <div className={`estilo-icones ${corFundoIcone}`}>
+        <img src={icone} alt={titulo} />
+      </div>
+
+      <h2 className="estilo-titulo-card">{titulo}</h2>
+
+      <p className="estilo-texto-card">
+        {descricao}
+      </p>
+
+      <button onClick={aoClicar} className="link-saiba-mais">
+        <span className="linha-animada">Saiba mais</span>
+        <span className="seta">→</span>
+      </button>
+    </div>
+  );
+}
