@@ -13,8 +13,8 @@ Repositório dedicado ao desenvolvimento do site da **Hut8** (Empresa Júnior de
 - [Cassiano Pessoa](https://github.com/Caspessoa)
 - [Alan Farias](https://github.com/AlanF4rias)
 - [Kenzo Takahashi](https://github.com/KenzoTakas)
-- [Pedro Mota] (https://github.com/PMota173)
-- [Manoela Viera] (https://github.com/ManoelaV)
+- [Pedro Mota](https://github.com/PMota173)
+- [Manoela Viera](https://github.com/ManoelaV)
 
 ## Estrutura de Pastas
 
