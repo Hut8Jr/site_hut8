@@ -1,3 +1,5 @@
+import TypewriterCodeCard from "../../components/TypewriterCodeCard.jsx";
+
 export default function EquipeSection1() {
   return (
     <section className="relative overflow-hidden bg-transparent py-20 px-6">   
@@ -34,20 +36,10 @@ export default function EquipeSection1() {
             />
 
             {/* Centralização: left-1/2 joga o card para o meio, -translate-x-1/2 recua metade do próprio tamanho do card para alinhar perfeitamente ao centro */}
-            <div className="absolute -bottom-15 left-1/2 transform -translate-x-1/2 w-[90%] sm:w-[380px] bg-white rounded-xl shadow-md p-6 border border-gray-100 z-20">
-              <div className="flex gap-2 mb-3">
-                <span className="w-3 h-3 bg-[#EF4444] rounded-full"></span>
-                <span className="w-3 h-3 bg-[#EAB308] rounded-full"></span>
-                <span className="w-3 h-3 bg-[#22C55E] rounded-full"></span>
-              </div>
-
-              <code className="text-sm text-[#4B5563]">
-                <span className="text-[#6B0F9C]">const </span>hut8 = {"{"} <br />
-                &nbsp;&nbsp;founded: <span className="text-[#A4DE02]">2014</span>, <br />
-                &nbsp;&nbsp;mission: <span className="text-[#A4DE02]">"Innovate"</span> <br />
-                {"}"};
-              </code>
-            </div>
+            <TypewriterCodeCard
+              className="absolute -bottom-15 left-1/2 z-20 w-[90%] -translate-x-1/2 sm:w-[380px]"
+              variant="floating"
+            />
           </div>
         </div>        
       </div>
