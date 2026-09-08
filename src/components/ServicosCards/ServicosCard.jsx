@@ -1,7 +1,7 @@
 export const ServicosCard = ({ id, title, description, topics, imageUrl, imageAlt}) => {
   return (
     <div id={id} className=
-      "bg-white rounded-2xl shadow-md p-8 w-full hover:shadow-lg transition flex flex-col lg:flex-row gap-10 items-center scroll-mt-28">
+      "bg-white rounded-2xl shadow-md p-8 w-full hover:shadow-xl transition-all duration-300 ease-in-out flex flex-col lg:flex-row gap-10 items-center scroll-mt-28">
       
       {/* Coluna do Conteúdo */}
       <div className="flex-1">

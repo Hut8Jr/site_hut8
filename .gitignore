@@ -56,4 +56,10 @@ Thumbs.db
 # 🚀 Misc
 # ================================
 *.local
+
+# ================================
+# 🧪 Ferramentas locais de teste (não fazem parte do site)
+# ================================
+mobile-emulator.mjs
+mobile-screenshots/
 >>>>>>> main
