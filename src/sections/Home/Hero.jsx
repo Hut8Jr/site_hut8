@@ -1,3 +1,5 @@
+import TypewriterCodeCard from "../../components/TypewriterCodeCard.jsx";
+
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-[#F9FAFB] py-20 px-6">
@@ -51,20 +53,7 @@ export default function Hero() {
             className="relative w-full h-full object-cover rounded-lg shadow-lg"
           />
 
-          <div className="absolute bottom-[24px] left-[24px] right-[24px] bg-white rounded-xl shadow-xl p-6">
-            <div className="flex gap-2 mb-3">
-              <span className="w-3 h-3 bg-[#EF4444] rounded-full"></span>
-              <span className="w-3 h-3 bg-[#EAB308] rounded-full"></span>
-              <span className="w-3 h-3 bg-[#22C55E] rounded-full"></span>
-            </div>
-
-            <code className="text-sm text-[#4B5563]">
-              <span className="text-[#6B0F9C]">const </span>hut8 = {"{"} <br />
-              &nbsp;&nbsp;founded: <span className="text-[#A4DE02]">2014</span>, <br />
-              &nbsp;&nbsp;mission: <span className="text-[#A4DE02]">"Innovate"</span> <br />
-              {"}"};
-            </code>
-          </div>
+          <TypewriterCodeCard className="absolute bottom-6 left-6 right-6" />
         </div>
       </div>
     </section>
