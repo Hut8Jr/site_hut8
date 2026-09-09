@@ -1,8 +1,15 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import logoHut from '../assets/Header/hut.svg';
 
 export default function Header({ setSecaoAtiva, setShowForm  }){
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    // Quando o menu mobile está aberto, esconde o botão flutuante do WhatsApp
+    // para ele nunca aparecer por cima do painel lateral (bug de z-index)
+    useEffect(() => {
+        document.body.classList.toggle('menu-aberto', isMenuOpen);
+        return () => document.body.classList.remove('menu-aberto');
+    }, [isMenuOpen]);
 
     // Função auxiliar para fechar o menu ao clicar em um link no mobile
     const handleNav = (secao) => {
@@ -48,13 +55,13 @@ export default function Header({ setSecaoAtiva, setShowForm  }){
             {/* Fundo escurecido ao abrir o menu lateral */}
             {isMenuOpen && (
                 <div 
-                    className="fixed inset-0 bg-black/50 z-40 md:hidden" 
+                    className="fixed inset-0 bg-black/50 z-[150] md:hidden" 
                     onClick={() => setIsMenuOpen(false)}
                 ></div>
             )}
             
             {/* Menu Lateral Mobile */}
-            <div className={`fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-50 transform transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden`}>
+            <div className={`fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-[150] transform transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden`}>
                 
                 {/* Botão de Fechar */}
                 <div className="flex justify-end p-6">

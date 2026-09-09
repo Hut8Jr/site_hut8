@@ -30,11 +30,11 @@ export default function Hero() {
           </p>
 
           <div className="flex gap-4 mt-8">
-            <button className="bg-[#A4DE02] px-6 py-3 rounded-lg font-bold hover:bg-[#8CC800] cursor-pointer">
+            <button className="bg-[#A4DE02] px-6 py-3 rounded-lg font-bold hover:bg-[#8CC800] cursor-pointer transition-all duration-300 ease-in-out transform hover:scale-105">
               <div className="text-[#6B0F9C]">Entre para a Hut ➜</div>
             </button>
 
-            <button className="border-1 border-[#D1D5DB] px-6 py-3 rounded-lg hover:bg-gray-200 cursor-pointer">
+            <button className="border border-[#D1D5DB] px-6 py-3 rounded-lg hover:bg-gray-200 cursor-pointer transition-all duration-300 ease-in-out transform hover:scale-105">
               <div className="text-[#1F2937] text-[16px] leading-[24px] font-medium">Ver Portfólio</div> 
             </button>
           </div>

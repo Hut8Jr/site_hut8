@@ -36,13 +36,15 @@ const WhatsAppButton = ({ showForm, setShowForm }) => {
     <>
       {showForm && (
         <div 
-          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[150] animate-in fade-in duration-300"
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[250] animate-in fade-in duration-300"
           onClick={() => setShowForm(false)}
         />
       )}
 
-      <div className="fixed right-4 top-1/2 -translate-y-1/2 z-[200]">
-        
+      {/* Container acima do backdrop (z-[250]) para o blur/escurecimento
+          nunca cobrir o botão nem o formulário ao abrir pelo "Fale Conosco" */}
+      <div className="fixed right-4 top-1/2 -translate-y-1/2 z-[300]">
+
         {/* BOTÃO PRINCIPAL - Apenas com a função de abrir o formulario para o usuário */}
         <button
           onClick={() => setShowForm(!showForm)}
@@ -63,7 +65,7 @@ const WhatsAppButton = ({ showForm, setShowForm }) => {
 
         {/* Formulário - (quando aberto por meio do botão executa essa estrutura) */}
         {showForm && (
-          <div className="absolute top-full mt-4 right-0 bg-white w-80 [@media(max-height:700px)]:w-[600px] rounded-2xl shadow-2xl p-6 max-h-[42vh] overflow-y-auto  scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent animate-in fade-in zoom-in slide-in-from-top-2 duration-300 origin-top-right z-[210]">
+          <div className="absolute top-full mt-4 right-0 bg-white w-80 [@media(max-height:700px)]:w-[600px] rounded-2xl shadow-2xl p-6 max-h-[42vh] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent animate-in fade-in zoom-in slide-in-from-top-2 duration-300 origin-top-right z-[260]">
 
             <h3 className="font-bold text-gray-800 mb-4">Contato  Hut8</h3>
             <form onSubmit={handleFormSubmit} className="flex flex-col gap-3">
