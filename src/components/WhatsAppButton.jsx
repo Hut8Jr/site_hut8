@@ -41,7 +41,9 @@ const WhatsAppButton = ({ showForm, setShowForm }) => {
         />
       )}
 
-      <div className="fixed right-4 top-1/2 -translate-y-1/2 z-[100] md:z-[200]">
+      {/* Container acima do backdrop (z-[250]) para o blur/escurecimento
+          nunca cobrir o botão nem o formulário ao abrir pelo "Fale Conosco" */}
+      <div className="fixed right-4 top-1/2 -translate-y-1/2 z-[300]">
 
         {/* BOTÃO PRINCIPAL - Apenas com a função de abrir o formulario para o usuário */}
         <button
