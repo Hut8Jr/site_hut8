@@ -93,14 +93,6 @@ const team = [
     linkedin: "https://www.linkedin.com/in/matheus-persch/",
   },
   {
-    name: "Mariana Ferreira Tica",
-    role: "Desenvolvedor",
-    image: "MarianaTica",
-    imagePosition: "object-[center_50%]",
-    github: "",
-    linkedin: "",
-  },
-  {
     name: "Kenzo Takahashi",
     role: "Desenvolvedor",
     image: "KenzoTakahashi",
