@@ -93,14 +93,6 @@ const team = [
     linkedin: "https://www.linkedin.com/in/matheus-persch/",
   },
   {
-    name: "Mariana Ferreira Tica",
-    role: "Desenvolvedor",
-    image: "MarianaTica",
-    imagePosition: "object-[center_50%]",
-    github: "",
-    linkedin: "",
-  },
-  {
     name: "Kenzo Takahashi",
     role: "Desenvolvedor",
     image: "KenzoTakahashi",
@@ -229,7 +221,7 @@ export default function DevsDesignersSection() {
       <section className="relative mx-auto max-w-6xl">
         <header className="flex items-center gap-6 mb-10">
           <div>
-            <h1 className="text-2xl font-extrabold tracking-tight text-violet-700 sm:text-3xl">
+            <h1 className="text-2xl font-extrabold tracking-tight text-[#6b0f9c] sm:text-3xl">
               Desenvolvedores & Designers
             </h1>
             <p className="mt-1 text-[10px] font-medium text-slate-400 sm:text-xs">
