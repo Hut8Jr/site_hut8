@@ -6,10 +6,10 @@ export function Card({ icone, titulo, descricao, corFundoIcone, aoClicar}) {
     <div className="estilo-cards">
       
       <div className={`estilo-icones ${corFundoIcone}`}>
-        <img src={icone} alt={titulo} />
+        <img src={icone} alt="" aria-hidden="true" width={32} height={32} />
       </div>
 
-      <h2 className="estilo-titulo-card">{titulo}</h2>
+      <h3 className="estilo-titulo-card">{titulo}</h3>
 
       <p className="estilo-texto-card">
         {descricao}

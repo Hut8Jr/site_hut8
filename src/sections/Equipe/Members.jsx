@@ -3,24 +3,24 @@ import { FiGithub } from "react-icons/fi";
 import { CiLinkedin } from "react-icons/ci";
 import { FaLink } from "react-icons/fa6";
 
-const presidenceModules = import.meta.glob("../../assets/EquipeGallery/*.png", {
+const presidenceModules = import.meta.glob("../../assets/EquipeGallery/*.webp", {
   eager: true,
   import: "default",
 });
 const galleryImages = Object.fromEntries(
   Object.entries(presidenceModules).map(([path, url]) => {
-    const filename = path.split("/").pop().replace(".png", "");
+    const filename = path.split("/").pop().replace(".webp", "");
     return [filename, url];
   }),
 );
 
 const professoresModules = import.meta.glob(
-  "../../assets/EquipeMembers/Professores/*.png",
+  "../../assets/EquipeMembers/Professores/*.webp",
   { eager: true, import: "default" },
 );
 const professoresImages = Object.fromEntries(
   Object.entries(professoresModules).map(([path, url]) => {
-    const filename = path.split("/").pop().replace(".png", "");
+    const filename = path.split("/").pop().replace(".webp", "");
     return [filename, url];
   }),
 );
@@ -89,16 +89,16 @@ const professores = [
     role: "Professor",
     description:
       "Doutor em Interação Humano-Computador pela University of Brighton e Mestre pela UFSC. É professor Adjunto na UFPel, ex-designer corporativo e especialista em design de interação, interfaces gestuais e conversacionais.",
-    image: "Dr. TobiasMulling",
-    cnpq: "http://lattes.cnpq.br/9327981374409781",
+    image: "dr-tobias-mulling",
+    cnpq: "https://lattes.cnpq.br/9327981374409781",
   },
   {
     name: "Prof. Dra. Larissa Astrogildo",
     role: "Professora",
     description:
       "Doutora e mestra em Ciência da Computação pela PUCRS com foco em Inteligência Computacional (PLN, ontologias e análise de sentimento), graduada em Engenharia de Computação pela FURG e técnica em Informática pelo IFRS Rio Grande.",
-    image: "Dra. LarissaAstrogildo",
-    cnpq: "http://lattes.cnpq.br/3941460073542194",
+    image: "dra-larissa-astrogildo",
+    cnpq: "https://lattes.cnpq.br/3941460073542194",
   },
 ];
 
@@ -128,7 +128,11 @@ export default function EquipeSection2() {
                   {pessoa.image ? (
                     <img
                       src={galleryImages[pessoa.image]}
-                      alt={pessoa.name}
+                      alt={`Foto de ${pessoa.name}, ${pessoa.role} na Hut 8 Jr.`}
+                      width={128}
+                      height={128}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover"
                     />
                   ) : (
@@ -207,7 +211,11 @@ export default function EquipeSection2() {
                   {professor.image ? (
                     <img
                       src={professoresImages[professor.image]}
-                      alt={professor.name}
+                      alt={`Foto do ${professor.name}, ${professor.role} na Hut 8 Jr.`}
+                      width={128}
+                      height={128}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover"
                     />
                   ) : (

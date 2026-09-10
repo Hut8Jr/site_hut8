@@ -23,7 +23,7 @@ export const ServicosCard = ({ id, title, description, topics, imageUrl, imageAl
               <ul className="space-y-1 text-gray-600 text-sm">
                 {topic.items.map((item, i) => (
                   <li key={i} className="flex items-start gap-2">
-                    <span className="text-purple-600">•</span>
+                    <span className="text-purple-600" aria-hidden="true">•</span>
                     {item}
                   </li>
                 ))}
@@ -38,7 +38,11 @@ export const ServicosCard = ({ id, title, description, topics, imageUrl, imageAl
         <div className="w-full lg:w-1/3 flex justify-center flex-shrink-0">
           <img 
             src={imageUrl} 
-            alt={imageAlt || title}
+            alt={imageAlt || `Ilustração do serviço de ${title}`}
+            width={320}
+            height={240}
+            loading="lazy"
+            decoding="async"
             className="w-full max-w-[320px] h-auto object-contain rounded-xl"
           />
         </div>

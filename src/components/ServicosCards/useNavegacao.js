@@ -1,14 +1,14 @@
-// hooks/useNavegacao.js
-export const useNavegacao = (setSecaoAtiva) => {
-  const navegarParaServico = (idAlvo) => {
-    // 1. Troca a aba
-    setSecaoAtiva("servicos");
+import { useNavigate } from "react-router-dom";
 
-    // 2. Aguarda a renderização e faz o scroll
+export const useNavegacao = () => {
+  const navigate = useNavigate();
+
+  const navegarParaServico = (idAlvo) => {
+    navigate(`/servicos#${idAlvo}`);
     setTimeout(() => {
       const elemento = document.getElementById(idAlvo);
       if (elemento) {
-        elemento.scrollIntoView({ behavior: "smooth" });
+        elemento.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     }, 100);
   };

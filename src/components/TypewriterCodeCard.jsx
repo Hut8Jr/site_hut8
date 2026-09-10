@@ -71,20 +71,20 @@ export default function TypewriterCodeCard({ className = "", variant = "overlay"
 
   return (
     <div
-      className={`rounded-xl bg-white p-6 ${CARD_VARIANTS[variant]} ${className}`}
+      className={`rounded-xl bg-white p-3.5 sm:p-6 max-w-full overflow-hidden ${CARD_VARIANTS[variant]} ${className}`}
     >
-      <div aria-hidden="true" className="mb-3 flex gap-2">
-        <span className="h-3 w-3 rounded-full bg-[#EF4444]"></span>
-        <span className="h-3 w-3 rounded-full bg-[#EAB308]"></span>
-        <span className="h-3 w-3 rounded-full bg-[#22C55E]"></span>
+      <div aria-hidden="true" className="mb-2 sm:mb-3 flex gap-2">
+        <span className="h-2.5 w-2.5 sm:h-3 sm:w-3 rounded-full bg-[#EF4444]"></span>
+        <span className="h-2.5 w-2.5 sm:h-3 sm:w-3 rounded-full bg-[#EAB308]"></span>
+        <span className="h-2.5 w-2.5 sm:h-3 sm:w-3 rounded-full bg-[#22C55E]"></span>
       </div>
 
-      <div className="relative">
-        <pre aria-hidden="true" className="invisible text-sm leading-5">
+      <div className="relative overflow-hidden">
+        <pre aria-hidden="true" className="invisible text-xs sm:text-sm leading-5 whitespace-pre-wrap break-all font-mono">
           <code>{renderCode(COMPLETE_CODE.length)}</code>
         </pre>
 
-        <pre aria-hidden="true" className="absolute inset-0 text-sm leading-5">
+        <pre aria-hidden="true" className="absolute inset-0 text-xs sm:text-sm leading-5 whitespace-pre-wrap break-all font-mono">
           <code>
             {renderCode(renderedCharacterCount)}
             {isTyping && (

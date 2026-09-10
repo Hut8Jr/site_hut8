@@ -8,7 +8,11 @@ export function FeaturedCardAdmin({ titulo, descricao, imagem }) {
       <div className="w-1/2 bg-[#F4F4F5] flex items-center justify-center">
         <img 
           src={imagem} 
-          alt={titulo} 
+          alt={`Interface do sistema ${titulo}`}
+          width={492}
+          height={494}
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover" 
         />
       </div>
@@ -27,17 +31,17 @@ export function FeaturedCardAdmin({ titulo, descricao, imagem }) {
         {/* Lista de benefícios */}
         <ul className="mb-[32px] list-none p-0 flex flex-col gap-3 font-['Inter'] text-[13px] font-semibold text-[#18181B]">
           <li className="flex items-center">
-            <img src={CheckIcon} alt="Check" className="w-5 h-5 mr-2" />
+            <img src={CheckIcon} alt="" aria-hidden="true" width={20} height={20} className="w-5 h-5 mr-2" />
             Conciliação Automática
           </li>
           <li className="flex items-center">
-            <img src={CheckIcon} alt="Check" className="w-5 h-5 mr-2" />
+            <img src={CheckIcon} alt="" aria-hidden="true" width={20} height={20} className="w-5 h-5 mr-2" />
             Integração com APIs Bancárias
           </li>
         </ul>
 
         {/* Botão */}
-        <button className="mt-2 w-full py-[10px] border-[1.5px] border-[#813BBE] bg-transparent text-[#813BBE] rounded-[12px] font-['Inter'] font-semibold cursor-pointer transition-all duration-200 hover:bg-[#813BBE] hover:text-white">
+        <button className="mt-2 w-full py-[10px] border-[1.5px] border-[#813BBE] bg-transparent text-[#813BBE] rounded-[12px] font-['Inter'] font-semibold cursor-pointer transition-all duration-200 hover:bg-[#813BBE] hover:text-white focus-visible:ring-2 focus-visible:ring-[#813BBE] focus-visible:outline-none">
           Ver Detalhes
         </button>
       </div>

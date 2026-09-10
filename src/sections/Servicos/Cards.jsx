@@ -1,7 +1,7 @@
 import { ServicosCard } from '../../components/ServicosCards/ServicosCard';
-import WebImagem from '../../assets/ServicosCards/plataformaWeb.png'
-import MobileImagem from '../../assets/ServicosCards/aplicativoMobile.png'
-import personalizadaImagem from '../../assets/ServicosCards/solucoesPersonalizadas.png'
+import WebImagem from '../../assets/ServicosCards/plataformaWeb.webp'
+import MobileImagem from '../../assets/ServicosCards/aplicativoMobile.webp'
+import personalizadaImagem from '../../assets/ServicosCards/solucoesPersonalizadas.webp'
 
 
 const Cards = () => {
@@ -139,7 +139,10 @@ const Cards = () => {
   ];
 
   return (
-    <section className="max-w-6xl mx-auto py-16 px-4">
+    <section className="max-w-6xl mx-auto py-16 px-4" aria-labelledby="titulo-especialidades">
+      <h2 id="titulo-especialidades" className="text-3xl font-extrabold text-[#1F2937] text-center mb-12">
+        Nossas Especialidades em Detalhes
+      </h2>
       
       <div className="flex flex-col gap-8">
         {servicos.map((service, index) => (

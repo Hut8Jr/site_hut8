@@ -1,14 +1,324 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>my-app</title>
+    <meta name="theme-color" content="#6B0F9C" />
+    <title>Hut 8 Jr. | Empresa Júnior de Computação - UFPel</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <!-- SEO Básico -->
+    <meta name="description" content="Hut 8 Jr. é a Empresa Júnior de Computação da UFPel. Desenvolvemos sites, aplicativos mobile e sistemas sob medida com excelência técnica em Pelotas e região." />
+    <meta name="author" content="Hut 8 Jr." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://hut8.com.br/" />
+    <link rel="alternate" hreflang="pt-BR" href="https://hut8.com.br/" />
+    <link rel="alternate" hreflang="x-default" href="https://hut8.com.br/" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <!-- GEO / Local SEO (Pelotas - RS) -->
+    <meta name="geo.region" content="BR-RS" />
+    <meta name="geo.placename" content="Pelotas" />
+    <meta name="geo.position" content="-31.7654;-52.3376" />
+    <meta name="ICBM" content="-31.7654, -52.3376" />
+
+    <!-- Open Graph / Facebook / WhatsApp / LinkedIn -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:url" content="https://hut8.com.br/" />
+    <meta property="og:site_name" content="Hut 8 Jr." />
+    <meta property="og:title" content="Hut 8 Jr. | Empresa Júnior de Computação - UFPel" />
+    <meta property="og:description" content="Soluções digitais em desenvolvimento web, aplicativos mobile e sistemas personalizados pela Empresa Júnior de Computação da UFPel em Pelotas/RS." />
+    <meta property="og:image" content="https://hut8.com.br/og-image.png" />
+    <meta property="og:image:secure_url" content="https://hut8.com.br/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Hut 8 Jr. - Empresa Júnior de Computação da UFPel" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Hut 8 Jr. | Empresa Júnior de Computação - UFPel" />
+    <meta name="twitter:description" content="Soluções digitais de alta performance desenvolvidas pela Empresa Júnior de Computação da UFPel." />
+    <meta name="twitter:image" content="https://hut8.com.br/og-image.png" />
+    <meta name="twitter:image:alt" content="Hut 8 Jr. - Empresa Júnior de Computação da UFPel" />
+
+    <!-- Self-Hosted Webfonts (zero external requests, zero CSP inline violations) -->
+    <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <style id="critical-fonts">
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 100 900;
+        font-display: swap;
+        src: url('/fonts/inter-latin-ext.woff2') format('woff2');
+        unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 100 900;
+        font-display: swap;
+        src: url('/fonts/inter-latin.woff2') format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: 'Plus Jakarta Sans';
+        font-style: normal;
+        font-weight: 200 800;
+        font-display: swap;
+        src: url('/fonts/plus-jakarta-sans-latin-ext.woff2') format('woff2');
+        unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+        font-family: 'Plus Jakarta Sans';
+        font-style: normal;
+        font-weight: 200 800;
+        font-display: swap;
+        src: url('/fonts/plus-jakarta-sans-latin.woff2') format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+    </style>
+
+    <!-- Schema.org JSON-LD (GEO & Rich Snippets) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://hut8.com.br/#website",
+          "url": "https://hut8.com.br/",
+          "name": "Hut 8 Jr.",
+          "description": "Empresa Júnior de Computação da Universidade Federal de Pelotas (UFPel)",
+          "publisher": {
+            "@id": "https://hut8.com.br/#organization"
+          },
+          "inLanguage": "pt-BR"
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://hut8.com.br/#organization",
+          "name": "Hut 8 Jr.",
+          "alternateName": "Hut 8 Empresa Júnior de Computação",
+          "url": "https://hut8.com.br/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://hut8.com.br/logo.png",
+            "width": 512,
+            "height": 512
+          },
+          "image": "https://hut8.com.br/og-image.png",
+          "description": "Empresa Júnior dos Cursos de Ciência e Engenharia da Computação da Universidade Federal de Pelotas (UFPel), especializada em desenvolvimento de sites, aplicativos mobile e sistemas sob medida.",
+          "foundingDate": "2014-05",
+          "priceRange": "$$",
+          "telephone": "+55-51-99746-7149",
+          "email": "hut8@inf.ufpel.edu.br",
+          "hasMap": "https://maps.app.goo.gl/j3MCur9rDnQKs9g56",
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "08:00",
+              "closes": "18:00"
+            }
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Rua Gomes Carneiro, 1 - Campus Porto",
+            "addressLocality": "Pelotas",
+            "addressRegion": "RS",
+            "postalCode": "96010-610",
+            "addressCountry": "BR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -31.7654,
+            "longitude": -52.3376
+          },
+          "sameAs": [
+            "https://www.instagram.com/hut8_jr/",
+            "https://www.linkedin.com/company/hut8/",
+            "https://www.facebook.com/hutEight"
+          ],
+          "parentOrganization": {
+            "@type": "CollegeOrUniversity",
+            "name": "Universidade Federal de Pelotas",
+            "alternateName": "UFPel",
+            "url": "https://ufpel.edu.br"
+          },
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Pelotas"
+            },
+            {
+              "@type": "City",
+              "name": "Capão do Leão"
+            },
+            {
+              "@type": "City",
+              "name": "Rio Grande"
+            },
+            {
+              "@type": "City",
+              "name": "Canguçu"
+            },
+            {
+              "@type": "City",
+              "name": "Bagé"
+            },
+            {
+              "@type": "State",
+              "name": "Rio Grande do Sul"
+            },
+            {
+              "@type": "Country",
+              "name": "Brasil"
+            }
+          ],
+          "member": [
+            { "@id": "https://hut8.com.br/#tobias-mulling" },
+            { "@id": "https://hut8.com.br/#larissa-astrogildo" }
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Serviços em Tecnologia da Informação",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Desenvolvimento Web",
+                  "description": "Criação de landing pages, portais corporativos e plataformas web de alta performance.",
+                  "provider": { "@id": "https://hut8.com.br/#organization" }
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Aplicativos Mobile",
+                  "description": "Desenvolvimento de aplicativos móveis nativos e híbridos para Android e iOS.",
+                  "provider": { "@id": "https://hut8.com.br/#organization" }
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Sistemas Personalizados",
+                  "description": "Automação de processos empresariais, dashboards analíticos e APIs sob medida.",
+                  "provider": { "@id": "https://hut8.com.br/#organization" }
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Consultoria em TI",
+                  "description": "Diagnóstico técnico e arquitetura de software para modernização digital.",
+                  "provider": { "@id": "https://hut8.com.br/#organization" }
+                }
+              }
+            ]
+          },
+          "knowsAbout": [
+            "Desenvolvimento Web",
+            "Aplicativos Mobile",
+            "Engenharia de Software",
+            "React",
+            "Vite",
+            "Tailwind CSS",
+            "Consultoria em TI"
+          ]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://hut8.com.br/#tobias-mulling",
+          "name": "Prof. Dr. Tobias Mulling",
+          "honorificPrefix": "Prof. Dr.",
+          "jobTitle": "Professor Adjunto e Orientador Acadêmico",
+          "worksFor": {
+            "@id": "https://hut8.com.br/#organization"
+          },
+          "affiliation": {
+            "@type": "CollegeOrUniversity",
+            "name": "Universidade Federal de Pelotas",
+            "alternateName": "UFPel"
+          },
+          "sameAs": [
+            "https://lattes.cnpq.br/9327981374409781"
+          ]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://hut8.com.br/#larissa-astrogildo",
+          "name": "Prof. Dra. Larissa Astrogildo",
+          "honorificPrefix": "Prof. Dra.",
+          "jobTitle": "Professora de Computação e Orientadora Acadêmica",
+          "worksFor": {
+            "@id": "https://hut8.com.br/#organization"
+          },
+          "affiliation": {
+            "@type": "CollegeOrUniversity",
+            "name": "Universidade Federal de Pelotas",
+            "alternateName": "UFPel"
+          },
+          "sameAs": [
+            "https://lattes.cnpq.br/3941460073542194"
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://hut8.com.br/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "O que é a Hut 8 Jr.?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A Hut 8 Jr. é a Empresa Júnior dos cursos de Ciência e Engenharia da Computação da Universidade Federal de Pelotas (UFPel), sediada em Pelotas - RS. Desenvolvemos soluções em software, plataformas web e aplicativos mobile com excelência técnica e impacto acadêmico."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quais serviços a Hut 8 Jr. realiza?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Desenvolvemos websites responsivos, plataformas web completas, aplicativos mobile (Android e iOS), sistemas de gestão sob medida, integrações de APIs e consultoria técnica em computação."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "A Hut 8 Jr. atende apenas em Pelotas?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Não. Embora estejamos sediados no Campus Porto da UFPel em Pelotas (RS) e atendamos presencialmente a região sul gaúcha (Pelotas, Capão do Leão, Rio Grande, Canguçu e Bagé), nossos projetos são executados de forma remota para clientes e empresas em todo o território nacional."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Como funciona a mentoria dos professores da UFPel nos projetos?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Cada projeto contratado na Hut 8 Jr. conta com a supervisão metodológica de professores doutores do Centro de Desenvolvimento Tecnológico (CDTec/UFPel), garantindo rigor arquitetural, segurança da informação e boas práticas de engenharia de software."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Como solicitar um orçamento de software com a Hut 8 Jr.?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Você pode entrar em contato através do nosso WhatsApp institucional no botão flutuante do site, pelo e-mail hut8@inf.ufpel.edu.br ou pelo formulário de contato. Nossa equipe realiza um diagnóstico inicial gratuito para alinhar escopo, prazos e orçamento."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -8,7 +8,11 @@ export function FeaturedCardPastejando({ titulo, descricao, imagem, tag, tecnolo
       <div className="w-full h-[256px] min-h-[256px] overflow-hidden">
         <img 
           src={imagem} 
-          alt={titulo} 
+          alt={`Case de sucesso do projeto ${titulo}`} 
+          width={480}
+          height={256}
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover object-[center_32%]" 
         />
       </div>
@@ -29,7 +33,10 @@ export function FeaturedCardPastejando({ titulo, descricao, imagem, tag, tecnolo
           {icone && (
             <img 
               src={icone} 
-              alt="ícone" 
+              alt="" 
+              aria-hidden="true"
+              width={32}
+              height={32}
               className="w-[32px] h-[32px] object-contain" 
             />
           )}

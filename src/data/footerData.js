@@ -1,3 +1,5 @@
+import { CONTACT_INFO } from "./contactConfig";
+
 export const footerLinks = {
   redesSocias: [
     {
@@ -10,7 +12,7 @@ export const footerLinks = {
     },
     {
       name: "LinkedIn",
-      url: "https://www.linkedin.com/company/hut-design/",
+      url: "https://www.linkedin.com/company/hut8/",
     },
   ],
 
@@ -33,7 +35,7 @@ export const footerLinks = {
     },
   ],
 
-  serviços: [
+  servicos: [
     {
       name: "Plataformas Web",
       targetId: "plataformasWeb",
@@ -50,16 +52,16 @@ export const footerLinks = {
 
   contato: [
     {
-      name: "Rua Gomes Carneiro, 1 - UFPel, Pelotas - RS, Brasil",
-      url: "https://maps.app.goo.gl/j3MCur9rDnQKs9g56",
+      name: CONTACT_INFO.address,
+      url: CONTACT_INFO.mapsUrl,
     },
     {
-      name: "hut8@inf.ufpel.edu.br",
-      url: "mailto:hut8@inf.ufpel.edu.br",
+      name: CONTACT_INFO.email,
+      url: `mailto:${CONTACT_INFO.email}`,
     },
     {
-      name: "(51)9 9298-3600",
-      url: "tel:+5551992983600",
+      name: CONTACT_INFO.phoneFormatted,
+      url: CONTACT_INFO.phoneTel,
     },
   ],
 };

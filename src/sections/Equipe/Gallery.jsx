@@ -2,14 +2,14 @@ import React from "react";
 import { FiGithub } from "react-icons/fi";
 import { CiLinkedin } from "react-icons/ci";
 
-const imageModules = import.meta.glob("../../assets/EquipeGallery/*.png", {
+const imageModules = import.meta.glob("../../assets/EquipeGallery/*.webp", {
   eager: true,
   import: "default",
 });
 
 const images = Object.fromEntries(
   Object.entries(imageModules).map(([path, url]) => {
-    const filename = path.split("/").pop().replace(".png", "");
+    const filename = path.split("/").pop().replace(".webp", "");
     return [filename, url];
   }),
 );
@@ -164,7 +164,11 @@ function Cards({ pessoa }) {
       <div className="overflow-hidden rounded-sm bg-slate-100">
         <img
           src={images[pessoa.image]}
-          alt={pessoa.name}
+          alt={`Foto de ${pessoa.name}, ${pessoa.role} na Hut 8 Jr.`}
+          width={160}
+          height={128}
+          loading="lazy"
+          decoding="async"
           className={`h-32 w-full object-cover ${pessoa.imagePosition} transition duration-300 group-hover:scale-105`}
         />
       </div>
@@ -173,7 +177,7 @@ function Cards({ pessoa }) {
         <h3 className="text-[11px] font-bold leading-tight text-slate-900">
           {pessoa.name}
         </h3>
-        <p className="mt-1 text-[8px] font-medium text-slate-400">
+        <p className="mt-1 text-[11px] font-medium text-slate-600">
           {pessoa.role}
         </p>
 
@@ -214,17 +218,17 @@ function Cards({ pessoa }) {
 
 export default function DevsDesignersSection() {
   return (
-    <main className="min-h-screen overflow-hidden bg-[#f6f7f9] px-6 py-10 font-sans text-slate-900">
+    <div className="relative w-full overflow-hidden bg-[#f6f7f9] px-6 py-10 font-sans text-slate-900">
       <div className="pointer-events-none absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-lime-200/45 blur-3xl" />
       <div className="pointer-events-none absolute -right-24 top-8 h-56 w-56 rounded-full bg-violet-100/50 blur-3xl" />
 
       <section className="relative mx-auto max-w-6xl">
         <header className="flex items-center gap-6 mb-10">
           <div>
-            <h1 className="text-2xl font-extrabold tracking-tight text-[#6b0f9c] sm:text-3xl">
+            <h2 className="text-2xl font-extrabold tracking-tight text-[#6b0f9c] sm:text-3xl">
               Desenvolvedores & Designers
-            </h1>
-            <p className="mt-1 text-[10px] font-medium text-slate-400 sm:text-xs">
+            </h2>
+            <p className="mt-1 text-xs font-medium text-slate-600 sm:text-xs">
               A força criativa por trás de cada linha de código.
             </p>
           </div>
@@ -237,6 +241,6 @@ export default function DevsDesignersSection() {
           ))}
         </div>
       </section>
-    </main>
+    </div>
   );
 }

@@ -1,0 +1,66 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Lint & Build Verification
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run ESLint
+        run: npm run lint
+
+      - name: Run Production Build (with Prerendering)
+        run: npm run build
+
+      - name: Verify Prerendered Pages & Asset Budget
+        run: |
+          test -f dist/index.html || (echo "Missing dist/index.html" && exit 1)
+          test -f dist/servicos/index.html || (echo "Missing dist/servicos/index.html" && exit 1)
+          test -f dist/projetos/index.html || (echo "Missing dist/projetos/index.html" && exit 1)
+          test -f dist/equipe/index.html || (echo "Missing dist/equipe/index.html" && exit 1)
+          grep -q "<h1>Empresa Júnior de Computação - UFPel</h1>" dist/index.html || (echo "Missing h1 in dist/index.html" && exit 1)
+          grep -q "<h1>Serviços Especializados em Tecnologia e Software</h1>" dist/servicos/index.html || (echo "Missing h1 in dist/servicos/index.html" && exit 1)
+          grep -q "<h1>Portfólio de Projetos e Soluções Tecnológicas</h1>" dist/projetos/index.html || (echo "Missing h1 in dist/projetos/index.html" && exit 1)
+          grep -q "<h1>Nossa Equipe e Professores Orientadores - UFPel</h1>" dist/equipe/index.html || (echo "Missing h1 in dist/equipe/index.html" && exit 1)
+          grep -q "<h1>404 - Página Não Encontrada</h1>" dist/404.html || (echo "Missing h1 in dist/404.html" && exit 1)
+          echo "All static prerendered HTML files and semantic content verified."
+          node -e "
+            const fs = require('fs');
+            const files = fs.readdirSync('dist/assets');
+            for (const f of files) {
+              const s = fs.statSync('dist/assets/' + f).size;
+              if (s > 300 * 1024) {
+                console.error('Asset exceeds 300KB budget:', f, (s/1024).toFixed(0) + 'KB');
+                process.exit(1);
+              }
+            }
+            console.log('All asset bundles within performance budget (<300KB).');
+          "
+
+      - name: Security Audit
+        run: npm audit --audit-level=high

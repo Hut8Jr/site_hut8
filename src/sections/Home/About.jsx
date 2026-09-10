@@ -1,6 +1,6 @@
 import React from 'react';
-import TeamMetting from '../../assets/HomeAbout/TeamMetting.png';
-import ufpel from '../../assets/HomeAbout/ufpel.png';
+import TeamMetting from '../../assets/HomeAbout/TeamMetting.webp';
+import ufpel from '../../assets/HomeAbout/ufpel.webp';
 import { IoSchoolSharp } from "react-icons/io5";
 import { IoCheckmarkCircle } from "react-icons/io5";
 import { RiMoneyDollarCircleFill } from "react-icons/ri";
@@ -9,25 +9,25 @@ export default function About() {
   return (
         <section className="w-full py-20 pt-20 pb-20 bg-[#F9FAFB]">
             <div className="max-w-6xl mx-auto px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-6">
-                <div className="relative flex items-center justify-center bg-gray-50">
+                <div className="relative flex items-center justify-center bg-gray-50 max-w-full">
                     {/* Imagem da Esquerda */}
-                    <div className="w-[280px] h-[250px] overflow-hidden flex-shrink-0 transform translate-y-8">
-                    <img src={TeamMetting} alt="Equipe trabalhando" className="w-full h-full object-cover"/>
+                    <div className="w-[140px] sm:w-[280px] h-[160px] sm:h-[250px] overflow-hidden flex-shrink-0 transform translate-y-4 sm:translate-y-8 rounded-lg sm:rounded-none">
+                    <img src={TeamMetting} alt="Equipe da Hut 8 Jr. em reunião de projeto" width={280} height={250} loading="lazy" decoding="async" className="w-full h-full object-cover"/>
                     </div>
                     {/* Imagem da Direita */}
-                    <div className="w-[230px] h-[250px] rounded-xl overflow-hidden flex-shrink-0 transform -translate-y-8">
-                        <img src={ufpel} alt="Fachada UFPEL" className="w-full h-full object-cover"/>
+                    <div className="w-[125px] sm:w-[230px] h-[160px] sm:h-[250px] rounded-lg sm:rounded-xl overflow-hidden flex-shrink-0 transform -translate-y-4 sm:-translate-y-8">
+                        <img src={ufpel} alt="Fachada do Campus Porto da Universidade Federal de Pelotas (UFPel)" width={230} height={250} loading="lazy" decoding="async" className="w-full h-full object-cover"/>
                     </div>
                     {/* Ícone Central*/}
-                    <div className="absolute left-1/2 top-1/2 z-10 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white p-[10px] shadow-lg">
-                        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#65158a]">
-                            <IoSchoolSharp size={24} color="#fff" />
+                    <div className="absolute left-1/2 top-1/2 z-10 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white p-1.5 sm:p-[10px] shadow-lg">
+                        <div className="flex h-10 w-10 sm:h-16 sm:w-16 items-center justify-center rounded-full bg-[#65158a]">
+                            <IoSchoolSharp size={20} color="#fff" className="sm:w-6 sm:h-6" />
                         </div>
                     </div>
                 </div>
                 <div className="">
-                    <h2 className="text-sm font-semibold text-[#A4DE02]">QUEM SOMOS</h2>
-                    <h1 className="text-3xl font-bold text-[#1F2937] mt-2 mb-4">Trazemos o mercado de trabalho para dentro do meio acadêmico</h1>
+                    <span className="text-sm font-semibold text-[#3f6212] uppercase tracking-wide">QUEM SOMOS</span>
+                    <h2 className="text-3xl font-bold text-[#1F2937] mt-2 mb-4">Trazemos o mercado de trabalho para dentro do meio acadêmico</h2>
                     <p className="text-gray-500 text-base leading-relaxed">Fundada em maio de 2014, a Hut8 é a empresa júnior dos cursos de Ciência e engenharia da computação, vinculada a Universidade Federal de Pelotas.</p>
                     <p className="text-gray-500 text-base leading-relaxed mt-4">Sem fins lucrativos, somos constituídos por uma equipe de jovens universitários que buscam obter conhecimento e experiência de mercado além das grades curriculares.</p>
                     <div className="flex flex-col gap-8 py-8">

@@ -12,7 +12,7 @@ function Portfolio({ navegarParaServico }) {
         <div className="estilo-container-texto-secao">
 
           {/* Subtitulo */}
-           <span className="text-[#A4DE02] estilo-subtitulo-secao">
+           <span className="text-[#3f6212] estilo-subtitulo-secao">
               O QUE FAZEMOS
             </span>
 

@@ -1,0 +1,28 @@
+# Hut 8 Jr. — Empresa Júnior de Computação da UFPel
+
+> Empresa Júnior dos Cursos de Ciência da Computação e Engenharia de Computação da Universidade Federal de Pelotas (UFPel). Desenvolvemos soluções em software, aplicativos mobile e plataformas web com excelência acadêmica e compromisso profissional em Pelotas e região.
+
+## Informações Institucionais
+- [Website Oficial](https://hut8.com.br/): Portal principal com apresentação institucional e visão geral da empresa júnior.
+- [Centro de Desenvolvimento Tecnológico - CDTec/UFPel](https://ufpel.edu.br): Unidade acadêmica da Universidade Federal de Pelotas à qual a empresa júnior é vinculada.
+- [Nossa Equipe](https://hut8.com.br/equipe): Membros discentes e professores orientadores com currículo Lattes/CNPq.
+- [Instagram](https://www.instagram.com/hut8_jr/): Canal de novidades, bastidores da equipe e eventos da empresa júnior.
+- [LinkedIn](https://www.linkedin.com/company/hut8/): Perfil institucional corporativo para conexões profissionais e parcerias.
+- [Facebook](https://www.facebook.com/hutEight): Página comunitária institucional.
+
+## Serviços Oferecidos
+- [Desenvolvimento Web](https://hut8.com.br/servicos): Criação de landing pages, plataformas web modernas com React e Vite, portais corporativos e e-commerces escaláveis.
+- [Aplicativos Mobile](https://hut8.com.br/servicos): Desenvolvimento de aplicativos móveis nativos e híbridos para Android e iOS com foco em usabilidade e performance.
+- [Sistemas Personalizados](https://hut8.com.br/servicos): Soluções sob medida para automação de processos, dashboards administrativos e APIs de integração.
+- [Consultoria em TI](https://hut8.com.br/servicos): Diagnóstico técnico, consultoria em modernização digital e arquitetura de software para empresas.
+
+## Portfólio e Cases
+- [Toni Neutzling](https://hut8.com.br/projetos): Plataforma e presença digital no setor imobiliário com filtros inteligentes, alta fidelidade visual e geração de leads.
+- [Plante Saúde](https://hut8.com.br/projetos): Solução Agrotech com foco em monitoramento preditivo e análise foliar orientada a dados.
+- [Pastejando](https://hut8.com.br/projetos): Aplicativo móvel para gestão e otimização de rotatividade de pastagem em propriedades leiteiras com IoT.
+- [Hut Admin](https://hut8.com.br/projetos): Sistema interno de gestão administrativa, conciliação e integração com APIs bancárias.
+
+## Contato e Localização
+- [Endereço](https://maps.app.goo.gl/j3MCur9rDnQKs9g56): Rua Gomes Carneiro, 1 - Campus Porto, UFPel, Pelotas - RS, Brasil, CEP 96010-610.
+- [E-mail Comercial](mailto:hut8@inf.ufpel.edu.br): hut8@inf.ufpel.edu.br
+- [Telefone Comercial](tel:+5551997467149): +55 (51) 99746-7149

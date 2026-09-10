@@ -1,17 +1,22 @@
 {
-  "name": "my-app",
+  "name": "site-hut8",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Website oficial da Hut 8 Jr. - Empresa Júnior de Computação da UFPel",
+  "homepage": "https://hut8.com.br",
+  "license": "MIT",
   "type": "module",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/prerender.js",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "optimize:images": "node scripts/convert-to-webp.js"
   },
   "dependencies": {
-    "icons": "^1.0.0",
-    "lucide-react": "^1.11.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-icons": "^5.6.0",
@@ -23,12 +28,11 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.1",
-    "autoprefixer": "^10.4.27",
     "eslint": "^9.39.4",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.4.0",
-    "postcss": "^8.5.8",
+    "sharp": "^0.35.4",
     "tailwindcss": "^4.2.2",
     "vite": "^8.0.1"
   }

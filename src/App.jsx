@@ -1,95 +1,54 @@
-import React from "react";
-import { useState } from "react";
-
-// componentes criados
-import { useNavegacao } from "./components/ServicosCards/useNavegacao.js";
+import React, { lazy, Suspense, useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header.jsx";
 import WhatsAppButton from "./components/WhatsAppButton.jsx";
 import Footer from "./components/Footer.jsx";
-import Bg1 from "./components/Backgrounds/Bg1.jsx";
-import Bg2 from "./components/Backgrounds/Bg2.jsx";
+import ScrollToTop from "./components/ScrollToTop.jsx";
+import RouteMeta from "./components/RouteMeta.jsx";
 
-// página home
-import HomeHero from "./sections/Home/Hero.jsx";
-import HomeStats from "./sections/Home/Stats.jsx";
-import HomeAbout from "./sections/Home/About.jsx";
-import HomePortfolio from "./sections/Home/Features/Portfolio";
-import HomeContact from "./sections/Home/Contact.jsx";
+import HomePage from "./pages/Home.jsx";
 
-// página projetos
-import ProjetosHero from "./sections/Projetos/Hero.jsx";
-import ProjetosCTA from "./sections/Projetos/CTA.jsx";
-import ProjetosPortfolio from "./sections/Projetos/Portfolio.jsx";
+const ProjetosPage = lazy(() => import("./pages/Projetos.jsx"));
+const ServicosPage = lazy(() => import("./pages/Servicos.jsx"));
+const EquipePage = lazy(() => import("./pages/Equipe.jsx"));
+const NotFoundPage = lazy(() => import("./pages/NotFound.jsx"));
 
-// página servicos
-import ServicosHero from "./sections/Servicos/Hero.jsx";
-import ServicosCards from "./sections/Servicos/Cards.jsx";
-import ServicosCTA from "./sections/Servicos/CTA.jsx";
-
-// página equipe
-import EquipeHero from "./sections/Equipe/Hero.jsx";
-import EquipeMembers from "./sections/Equipe/Members.jsx";
-import EquipeGallery from "./sections/Equipe/Gallery.jsx";
+function LoadingFallback() {
+  return (
+    <div className="min-h-screen flex items-center justify-center" aria-busy="true">
+      <div 
+        aria-label="Carregando página" 
+        className="w-10 h-10 border-4 border-purple-800 border-t-transparent rounded-full animate-spin" 
+      />
+    </div>
+  );
+}
 
 function App() {
-  // página inicial padrão
-  const [secaoAtiva, setSecaoAtiva] = useState("home");
-
-  const { navegarParaServico } = useNavegacao(setSecaoAtiva);
-
   const [showForm, setShowForm] = useState(false);
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
-      <Header setSecaoAtiva={setSecaoAtiva} setShowForm={setShowForm} />
+      <ScrollToTop />
+      <RouteMeta />
+      <Header setShowForm={setShowForm} />
 
-      {/* Conteúdo principal */}
-      <div className="grow">
-        {/* renderiza apenas o bloco correspondente atual */}
+      <main id="main-content" className="grow">
+        <Suspense fallback={<LoadingFallback />}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/projetos" element={<ProjetosPage />} />
+            <Route path="/servicos" element={<ServicosPage />} />
+            <Route path="/equipe" element={<EquipePage />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+        </Suspense>
+      </main>
 
-        {secaoAtiva === "home" && (
-          <>
-            <HomeHero />
-            <HomeStats />
-            <HomeAbout />
-            <HomePortfolio navegarParaServico={navegarParaServico} />
-            <HomeContact />
-          </>
-        )}
-
-        {secaoAtiva === "projetos" && (
-          <>
-            <Bg1>
-              <ProjetosHero /> {/* section1 da landing projetos */}
-              <ProjetosPortfolio />
-              <ProjetosCTA />
-            </Bg1>
-          </>
-        )}
-        {secaoAtiva === "servicos" && (
-          <>
-            <ServicosHero />
-            <ServicosCards />
-            <ServicosCTA />
-          </>
-        )}
-        {secaoAtiva === "equipe" && (
-          <>
-            <Bg2>
-              <EquipeHero />
-              <EquipeMembers />
-              <EquipeGallery />
-            </Bg2>
-          </>
-        )}
-      </div>
-
-      {/* Botão flutuante do whatsapp */}
       <WhatsAppButton showForm={showForm} setShowForm={setShowForm} />
-
-      {/* Footer sempre no final */}
-      <Footer setSecaoAtiva={setSecaoAtiva} />
+      <Footer />
     </div>
   );
 }
+
 export default App;

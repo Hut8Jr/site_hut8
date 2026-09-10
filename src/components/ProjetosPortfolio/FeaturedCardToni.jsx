@@ -52,10 +52,10 @@ export function FeaturedCardToni({ titulo, descricao, imagem, tag, tagsSecundari
             </div>
           ) : <div />}
 
-            <a href="#caso" className="group/link text-[#CAFF6F] font-[600] flex items-center gap-[10px] whitespace-nowrap">
-              <span className="border-b border-transparent group-hover/link:border-[#CAFF6F] transition-all duration-300">Ver Caso</span>
+            <span className="group/link text-[#CAFF6F] font-[600] flex items-center gap-[10px] whitespace-nowrap">
+              <span className="border-b border-transparent group-hover/link:border-[#CAFF6F] transition-all duration-300">Case de Sucesso</span>
               <span className="text-xl transition-transform group-hover/link:translate-x-1">→</span>
-            </a>
+            </span>
         </div>
       </div>
     </div>
