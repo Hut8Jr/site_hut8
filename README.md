@@ -45,6 +45,7 @@ Repositório dedicado ao desenvolvimento do site da **Hut8** (Empresa Júnior de
 │   └── main.jsx            # Ponto de entrada do React
 ├── .gitignore
 ├── eslint.config.js        # Configuração do linter
+├── AI_CONTEXT.md          # Documentação mestre de arquitetura, SEO, performance e regras para IAs
 ├── index.html              # Template base
 ├── LICENSE                 # Licença do projeto
 ├── package-lock.json       # Árvore de dependências travada
@@ -52,6 +53,12 @@ Repositório dedicado ao desenvolvimento do site da **Hut8** (Empresa Júnior de
 ├── README.md               # Documentação principal
 └── vite.config.js          # Configuração do bundler
 ```
+
+## Arquitetura e Diretrizes para IAs
+
+Para detalhes sobre a arquitetura de **SEO (SSG)**, **GEO (Otimização para IAs)**, **Performance (Core Web Vitals)**, **Acessibilidade (WCAG 2.1/2.2 AA)**, **Segurança HTTP** e regras de desenvolvimento, consulte o documento mestre:
+👉 **[AI_CONTEXT.md](./AI_CONTEXT.md)**
+
 
 ## Como Executar Localmente
 
