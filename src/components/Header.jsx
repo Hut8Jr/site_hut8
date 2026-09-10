@@ -126,21 +126,12 @@ export default function Header({ setShowForm }) {
             {/* Fundo escurecido ao abrir o menu lateral (não focável) */}
             {isMenuOpen && (
                 <div 
-<<<<<<< HEAD
-                    className="fixed inset-0 bg-black/50 z-[150] md:hidden" 
-=======
                     aria-hidden="true"
-                    className="fixed inset-0 bg-black/50 z-40 md:hidden cursor-default" 
->>>>>>> 371b80a (feat: complete 10/10 production refactor (webfonts, wcag a11y, geo schema, seo prerender, vercel cache))
+                    className="fixed inset-0 bg-black/50 z-[150] md:hidden cursor-default" 
                     onClick={() => setIsMenuOpen(false)}
                 />
             )}
             
-<<<<<<< HEAD
-            {/* Menu Lateral Mobile */}
-            <div className={`fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-[150] transform transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden`}>
-                
-=======
             {/* Menu Lateral Mobile com Focus Trap */}
             <div 
                 ref={mobileMenuRef}
@@ -149,11 +140,10 @@ export default function Header({ setShowForm }) {
                 aria-modal="true" 
                 aria-label="Menu de navegação mobile"
                 aria-hidden={!isMenuOpen}
-                className={`fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-50 transform transition-all duration-300 ease-in-out md:hidden ${
+                className={`fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-[200] transform transition-all duration-300 ease-in-out md:hidden ${
                     isMenuOpen ? 'translate-x-0 opacity-100 pointer-events-auto visible' : 'translate-x-full opacity-0 pointer-events-none invisible'
                 }`}
             >
->>>>>>> 371b80a (feat: complete 10/10 production refactor (webfonts, wcag a11y, geo schema, seo prerender, vercel cache))
                 {/* Botão de Fechar */}
                 <div className="flex justify-end p-6">
                     <button 

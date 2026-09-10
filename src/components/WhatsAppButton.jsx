@@ -119,16 +119,13 @@ const WhatsAppButton = ({ showForm, setShowForm }) => {
 
         {/* Formulário Modal com Focus Trap */}
         {showForm && (
-<<<<<<< HEAD
-          <div className="absolute top-full mt-4 right-0 bg-white w-80 [@media(max-height:700px)]:w-[600px] rounded-2xl shadow-2xl p-6 max-h-[42vh] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent animate-in fade-in zoom-in slide-in-from-top-2 duration-300 origin-top-right z-[260]">
-=======
           <div 
             ref={modalRef}
             id="modal-contato"
             role="dialog" 
             aria-modal="true" 
             aria-labelledby="modal-contato-titulo"
-            className="absolute top-full mt-4 right-0 bg-white w-80 [@media(max-height:700px)]:w-[450px] rounded-2xl shadow-2xl p-6 max-h-[85vh] overflow-y-auto origin-top-right z-[210] border border-gray-100"
+            className="absolute top-full mt-4 right-0 bg-white w-80 [@media(max-height:700px)]:w-[450px] rounded-2xl shadow-2xl p-6 max-h-[85vh] overflow-y-auto origin-top-right z-[310] border border-gray-100"
           >
             <div className="flex justify-between items-center mb-4">
               <h3 id="modal-contato-titulo" className="font-bold text-gray-800 text-lg">Contato Hut 8 Jr.</h3>
@@ -143,7 +140,6 @@ const WhatsAppButton = ({ showForm, setShowForm }) => {
                 </svg>
               </button>
             </div>
->>>>>>> 371b80a (feat: complete 10/10 production refactor (webfonts, wcag a11y, geo schema, seo prerender, vercel cache))
 
             <form onSubmit={handleFormSubmit} className="flex flex-col gap-2.5">
               <div>
