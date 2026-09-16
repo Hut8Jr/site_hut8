@@ -3,7 +3,7 @@ import hologramaImg from "../../assets/ProjetosHero/holograma.webp";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-transparent py-20 px-4 sm:px-6 max-w-full">      
+    <section className="relative overflow-hidden bg-transparent py-12 lg:py-20 px-4 sm:px-6 max-w-full">      
       <div className="max-w-6xl xl:max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 items-center">
 
         {/* LADO ESQUERDO: HEADER, DESCRIÇÃO E BOTÕES */}
@@ -23,7 +23,7 @@ export default function Hero() {
         </div>
 
         {/* LADO DIREITO: IMAGEM E CARD SOBREPOSTO */}
-        <div className="relative w-full max-w-[520px] mx-auto lg:max-w-none lg:mx-0 lg:w-1/2 aspect-square min-w-0 overflow-hidden sm:overflow-visible">
+        <div className="relative w-full max-w-[520px] mx-auto lg:max-w-none lg:mx-0 lg:w-1/2 aspect-square sm:aspect-[4/3] min-w-0 overflow-hidden sm:overflow-visible">
 
           {/* BOLAS DESFOCADAS ATRÁS DA IMAGEM */}
           <div className="pointer-events-none absolute -bottom-15 -left-30 h-40 w-40 rounded-full bg-verde-hut8 opacity-25 blur-md"></div>

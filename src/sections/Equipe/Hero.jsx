@@ -3,7 +3,7 @@ import sunsetImg from "../../assets/EquipeMembers/sunset.webp";
 
 export default function EquipeSection1() {
   return (
-    <section className="relative overflow-hidden bg-transparent py-20 px-4 sm:px-6 max-w-full">   
+    <section className="relative overflow-hidden bg-transparent py-12 lg:py-20 px-4 sm:px-6 max-w-full">   
 
         <div className="relative z-10 max-w-6xl xl:max-w-7xl mx-auto">
           

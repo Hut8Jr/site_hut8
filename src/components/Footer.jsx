@@ -73,16 +73,16 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Coluna 1: Logo e Sobre */}
           <div className="flex flex-col gap-3">
-            <Link to="/" className="flex items-center gap-[6px] w-fit" aria-label="Hut8 - Página Inicial">
+            <Link to="/" className="flex items-center gap-2 w-fit" aria-label="Hut8 - Página Inicial">
               {/* Sem o circulo verde: o manual o tira de circulacao.
                   Proporcao 3:4 (24x32), distancia 0,2 x 32 = 6px. */}
               <img
                 src={simboloHut8}
                 alt=""
                 aria-hidden="true"
-                width={24}
-                height={32}
-                className="w-6 h-8"
+                width={30}
+                height={40}
+                className="w-[30px] h-10"
               />
               <span className="font-heading font-bold text-2xl tracking-tight text-preto-hut8">Hut8</span>
             </Link>

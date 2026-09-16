@@ -3,7 +3,7 @@ import servicosHeaderImg from "../../assets/ServicosCards/servicosHeader.webp";
 
 function HeroServicos() {
   return (
-    <section className="relative overflow-hidden bg-transparent py-20 px-4 sm:px-6 max-w-full">
+    <section className="relative overflow-hidden bg-transparent py-12 lg:py-20 px-4 sm:px-6 max-w-full">
 
         {/* ESFERAS DESFOCADAS NO BACKGROUND */}
         <div className="pointer-events-none absolute -top-10 -right-10 h-72 w-72 rounded-full bg-roxo-hut8 opacity-20 blur-3xl"></div>
@@ -26,7 +26,7 @@ function HeroServicos() {
         </div>
 
         {/* LADO DIREITO: IMAGEM E CARD SOBREPOSTO */}
-        <div className="relative w-full max-w-[520px] mx-auto lg:max-w-none lg:mx-0 lg:w-1/2 aspect-square min-w-0 overflow-hidden sm:overflow-visible">
+        <div className="relative w-full max-w-[520px] mx-auto lg:max-w-none lg:mx-0 lg:w-1/2 aspect-square sm:aspect-[4/3] min-w-0 overflow-hidden sm:overflow-visible">
 
           {/* BOLAS DESFOCADAS ATRÁS DA IMAGEM */}
           <div className="pointer-events-none absolute -top-10 -right-10 h-32 w-32 rounded-full bg-verde-hut8 opacity-25 blur-md"></div>

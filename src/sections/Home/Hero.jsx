@@ -5,7 +5,7 @@ import estudantesImg from "../../assets/HomeHero/estudantes.webp";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-cinza-fundo py-20 px-4 sm:px-6 max-w-full">
+    <section className="relative overflow-hidden bg-cinza-fundo py-12 lg:py-20 px-4 sm:px-6 max-w-full">
       <div className="max-w-6xl xl:max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 items-center">
 
         {/* BOLAS DESFOCADAS NO BACKGROUND */}
@@ -47,7 +47,7 @@ export default function Hero() {
         </div>
 
         {/* LADO DIREITO: IMAGEM E CARD SOBREPOSTO */}
-        <div className="relative w-full max-w-[520px] mx-auto lg:max-w-none lg:mx-0 lg:w-1/2 aspect-square min-w-0 overflow-hidden sm:overflow-visible">
+        <div className="relative w-full max-w-[520px] mx-auto lg:max-w-none lg:mx-0 lg:w-1/2 aspect-square sm:aspect-[4/3] min-w-0 overflow-hidden sm:overflow-visible">
           {/* BOLAS DESFOCADAS ATRÁS DA IMAGEM */}
           <div className="pointer-events-none absolute -top-6 -right-6 sm:-top-10 sm:-right-10 h-24 w-24 sm:h-32 sm:w-32 rounded-full bg-verde-hut8 opacity-25 blur-md"></div>
           <div className="pointer-events-none absolute -bottom-6 -left-6 sm:-bottom-10 sm:-left-10 h-24 w-24 sm:h-32 sm:w-32 rounded-full bg-roxo-hut8 opacity-25 blur-md"></div>

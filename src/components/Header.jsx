@@ -78,8 +78,8 @@ export default function Header({ setShowForm }) {
                 Pular para o conteúdo principal
             </a>
 
-            <div className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center gap-4">
-                <Link to="/" className="flex items-center gap-3 group" aria-label="Hut8 - Página Inicial">
+            <div className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center gap-5 lg:gap-8">
+                <Link to="/" className="flex items-center gap-2 sm:gap-2.5 lg:gap-3 group" aria-label="Hut8 - Página Inicial">
                     {/* Assinatura horizontal: simbolo a esquerda, nome a direita.
                         Proporcao nativa 3:4 (45x60) e distancia 0,2 x altura = 12px (gap-3). */}
                     <img
@@ -88,9 +88,9 @@ export default function Header({ setShowForm }) {
                         aria-hidden="true"
                         width="45"
                         height="60"
-                        className="w-[45px] h-[60px]"
+                        className="h-10 w-[30px] sm:h-12 sm:w-9 lg:h-15 lg:w-[45px]"
                     />
-                    <span className="font-heading font-bold text-2xl tracking-tight text-preto-hut8">Hut8</span>
+                    <span className="font-heading font-bold text-xl sm:text-2xl tracking-tight text-preto-hut8">Hut8</span>
                 </Link>
                 
                 {/* Botão Mobile (Hambúrguer) visível apenas em telas menores */}
