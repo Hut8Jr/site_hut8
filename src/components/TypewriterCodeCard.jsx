@@ -87,9 +87,13 @@ export default function TypewriterCodeCard({ className = "", variant = "overlay"
         <pre aria-hidden="true" className="absolute inset-0 text-xs sm:text-sm leading-5 whitespace-pre-wrap break-all font-mono">
           <code>
             {renderCode(renderedCharacterCount)}
-            {isTyping && (
-              <span className="inline-block h-[1em] w-0.5 translate-y-0.5 animate-pulse bg-roxo-hut8"></span>
-            )}
+            {/* O cursor nunca sai: solido enquanto digita, piscando depois.
+                E o que sustenta a impressao de digitacao em andamento. */}
+            <span
+              className={`inline-block h-[1em] w-0.5 translate-y-0.5 bg-roxo-hut8 ${
+                isTyping ? "" : "cursor-piscando"
+              }`}
+            ></span>
           </code>
         </pre>
 
