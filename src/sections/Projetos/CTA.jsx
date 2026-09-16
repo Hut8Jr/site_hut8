@@ -6,7 +6,7 @@ export default function CTA() {
       titlePrefix="Pronto para tirar sua"
       titleHighlight="ideia do papel?"
       orcamentoMsg="Olá! Gostaria de solicitar um orçamento para o meu projeto."
-      consultorMsg="Olá! Gostaria de falar com um consultor da Hut 8."
+      consultorMsg="Olá! Gostaria de falar com um consultor da Hut8."
     />
   );
 }

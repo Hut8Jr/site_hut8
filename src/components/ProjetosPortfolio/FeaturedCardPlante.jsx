@@ -25,24 +25,24 @@ export function FeaturedCardPlante({ titulo, descricao, imagem, tag, metrica }) 
       <div className="relative z-10 flex flex-col gap-4 mt-auto">
         {/* Tag */}
         {tag && (
-          <span className="bg-[#D4FF37] text-[#344E00] text-[12px] font-bold h-[24px] px-[12px] flex items-center justify-center rounded-full uppercase font-['Inter'] w-fit shrink-0 border-none whitespace-nowrap">
+          <span className="bg-[#D4FF37] text-[#344E00] h-[24px] px-[12px] flex items-center justify-center rounded-full w-fit shrink-0 border-none whitespace-nowrap font-label font-bold uppercase tracking-[0.12em] text-[14px] sm:text-[18px]">
             {tag}
           </span>
         )}
 
         {/* Título e Descrição */}
         <div className="flex flex-col gap-2">
-          <h2 className="text-white text-[24px] font-bold leading-tight font-['Inter']">
+          <h2 className="font-heading tracking-tight text-white text-[24px] font-bold leading-tight">
             {titulo}
           </h2>
-          <p className="text-white text-[16px] leading-[24px] font-medium font-['Inter'] max-w-[380px] drop-shadow-sm">
+          <p className="text-white text-[16px] font-medium font-body max-w-[380px] drop-shadow-sm leading-[1.5]">
             {descricao}
           </p>
         </div>
 
         {/* Rodapé */}
         <div className="flex justify-between items-end mt-4">
-          <span className="text-[#CAFF6F] font-bold text-[16px] leading-[24px] font-['Inter']">
+          <span className="text-[#CAFF6F] font-bold text-[16px] leading-[24px] font-body">
             {metrica}
           </span>
           <div 

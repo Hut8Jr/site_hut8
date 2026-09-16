@@ -1,30 +1,46 @@
 @import "tailwindcss";
+@import "./sections/Home/Features/Portfolio.css";
 
-/* Fallback font stacks para renderização confiável em qualquer browser */
-body {
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+@theme {
+  --color-preto-hut8: #0B0B0B;
+  --color-cinza-fundo: #F4F4F4;
+  --color-cinza-texto: #6E6E6E;  /* manual: #8A8A8A (etiqueta e apoio). Escurecido para #6E6E6E: o HEX do manual da 3,45:1 sobre branco e reprova WCAG AA (min 4,5:1). #6E6E6E da 5,10:1 sobre branco e 4,64:1 sobre #F4F4F4, preservando o papel de cinza de etiqueta. */
+  --color-verde-hut8: #A4DE02;
+  --color-roxo-hut8: #6B0F9C;
+  --font-body: 'Instrument Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-heading: 'Archivo', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-label: 'Martian Mono', ui-monospace, monospace;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-body);
+    color: var(--color-preto-hut8);
+    line-height: 1.5;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+
+  p strong, p b {
+    font-weight: 500;
+  }
 }
 
 body, html {
   overflow-x: hidden;
 }
 
-/* Quando o menu lateral mobile está aberto, esconde o botão flutuante
-   do WhatsApp (container inteiro) para ele não aparecer por cima do painel
-   nem bloquear cliques (bug de z-index) */
+/* Oculta o contato flutuante enquanto o menu mobile está aberto. */
 body.menu-aberto div:has(> [aria-label="Conversar no WhatsApp"]) {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
 }
-
-.font-\[\'Inter\'\] {
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-}
-
-.font-\[\'Plus_Jakarta_Sans\'\] {
-  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-}
-
-/* Importa os estilos específicos da section3 Landing2 (cards) */
-@import "./sections/Home/Features/Portfolio.css";

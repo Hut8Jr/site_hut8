@@ -12,18 +12,18 @@ function Portfolio({ navegarParaServico }) {
         <div className="estilo-container-texto-secao">
 
           {/* Subtitulo */}
-           <span className="text-[#3f6212] estilo-subtitulo-secao">
+           <span className="text-cinza-texto estilo-subtitulo-secao">
               O QUE FAZEMOS
             </span>
 
           {/* Título da seção*/}
-          <h2 className="text-[#1F2937] estilo-titulo-secao">
+          <h2 className="font-heading tracking-tight text-preto-hut8 estilo-titulo-secao">
             Soluções Digitais Completas
           </h2>
 
           {/* Parágrafo de descrição */}
-          <p className="text-[#4B5563] ">
-            Temos a solução e as ferramentas perfeitas a sua necessidade, do<br></br> conceito ao código.
+          <p className="text-preto-hut8 leading-[1.5]">
+            Temos a solução e as ferramentas perfeitas para a sua necessidade, do conceito ao código.
           </p>
 
         </div>
@@ -35,7 +35,7 @@ function Portfolio({ navegarParaServico }) {
           <Card 
             icone={monitorIcon} 
             titulo="Plataformas Web" 
-            descricao="Sites institucionais, e-commerces e sistemas web robustos. Levamos seu negócio para a internet com tecnologia de ponta." 
+            descricao="Sites institucionais, e-commerces e sistemas web robustos. Levamos seu negócio para a internet com escopo escrito e prazo combinado."
             corFundoIcone="bg-[#6B0F9C1A]"
             aoClicar={() => navegarParaServico("plataformasWeb")}
           />

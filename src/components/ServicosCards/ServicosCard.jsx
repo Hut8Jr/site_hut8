@@ -5,22 +5,22 @@ export const ServicosCard = ({ id, title, description, topics, imageUrl, imageAl
       
       {/* Coluna do Conteúdo */}
       <div className="flex-1">
-        <h3 className="text-2xl font-bold mb-3 text-gray-800">
+        <h3 className="font-heading tracking-tight text-2xl font-bold mb-3 text-preto-hut8">
           {title}
         </h3>
 
-        <p className="text-gray-600 mb-6">
+        <p className="text-preto-hut8 mb-6 leading-[1.5]">
           {description}
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-8 text-center sm:text-left">
           {topics?.map((topic, index) => (
             <div key={index}>
-              <h4 className="font-semibold text-gray-800 mb-2">
+              <h4 className="font-semibold text-preto-hut8 mb-2">
                 {topic.title}
               </h4>
 
-              <ul className="space-y-1 text-gray-600 text-sm">
+              <ul className="space-y-1 text-preto-hut8 text-sm">
                 {topic.items.map((item, i) => (
                   <li key={i} className="flex items-start gap-2">
                     <span className="text-purple-600" aria-hidden="true">•</span>

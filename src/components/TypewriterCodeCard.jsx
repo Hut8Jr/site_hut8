@@ -4,12 +4,12 @@ const TYPEWRITER_SPEED_MS = 35;
 const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
 
 const CODE_TOKENS = [
-  { text: "const ", className: "text-[#6B0F9C]" },
-  { text: "hut8 = {\n  founded: ", className: "text-[#4B5563]" },
-  { text: "2014", className: "text-[#A4DE02]" },
-  { text: ",\n  mission: ", className: "text-[#4B5563]" },
-  { text: '"Innovate"', className: "text-[#A4DE02]" },
-  { text: "\n};", className: "text-[#4B5563]" },
+  { text: "const ", className: "text-roxo-hut8" },
+  { text: "hut8 = {\n  founded: ", className: "text-preto-hut8" },
+  { text: "2014", className: "text-preto-hut8" },
+  { text: ",\n  mission: ", className: "text-preto-hut8" },
+  { text: '"Innovate"', className: "text-preto-hut8" },
+  { text: "\n};", className: "text-preto-hut8" },
 ];
 
 const COMPLETE_CODE = CODE_TOKENS.map(({ text }) => text).join("");
@@ -88,7 +88,7 @@ export default function TypewriterCodeCard({ className = "", variant = "overlay"
           <code>
             {renderCode(renderedCharacterCount)}
             {isTyping && (
-              <span className="inline-block h-[1em] w-0.5 translate-y-0.5 animate-pulse bg-[#6B0F9C]"></span>
+              <span className="inline-block h-[1em] w-0.5 translate-y-0.5 animate-pulse bg-roxo-hut8"></span>
             )}
           </code>
         </pre>

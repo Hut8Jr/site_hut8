@@ -7,12 +7,12 @@ import { RiMoneyDollarCircleFill } from "react-icons/ri";
 
 export default function About() {
   return (
-        <section className="w-full py-20 pt-20 pb-20 bg-[#F9FAFB]">
+        <section className="w-full py-20 pt-20 pb-20 bg-cinza-fundo">
             <div className="max-w-6xl mx-auto px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-6">
                 <div className="relative flex items-center justify-center bg-gray-50 max-w-full">
                     {/* Imagem da Esquerda */}
                     <div className="w-[140px] sm:w-[280px] h-[160px] sm:h-[250px] overflow-hidden flex-shrink-0 transform translate-y-4 sm:translate-y-8 rounded-lg sm:rounded-none">
-                    <img src={TeamMetting} alt="Equipe da Hut 8 Jr. em reunião de projeto" width={280} height={250} loading="lazy" decoding="async" className="w-full h-full object-cover"/>
+                    <img src={TeamMetting} alt="Equipe da Hut8 em reunião de projeto" width={280} height={250} loading="lazy" decoding="async" className="w-full h-full object-cover"/>
                     </div>
                     {/* Imagem da Direita */}
                     <div className="w-[125px] sm:w-[230px] h-[160px] sm:h-[250px] rounded-lg sm:rounded-xl overflow-hidden flex-shrink-0 transform -translate-y-4 sm:-translate-y-8">
@@ -26,27 +26,27 @@ export default function About() {
                     </div>
                 </div>
                 <div className="">
-                    <span className="text-sm font-semibold text-[#3f6212] uppercase tracking-wide">QUEM SOMOS</span>
-                    <h2 className="text-3xl font-bold text-[#1F2937] mt-2 mb-4">Trazemos o mercado de trabalho para dentro do meio acadêmico</h2>
-                    <p className="text-gray-500 text-base leading-relaxed">Fundada em maio de 2014, a Hut8 é a empresa júnior dos cursos de Ciência e engenharia da computação, vinculada a Universidade Federal de Pelotas.</p>
-                    <p className="text-gray-500 text-base leading-relaxed mt-4">Sem fins lucrativos, somos constituídos por uma equipe de jovens universitários que buscam obter conhecimento e experiência de mercado além das grades curriculares.</p>
+                    <span className="font-label font-normal text-[14px] sm:text-[18px] text-cinza-texto uppercase tracking-[0.12em]">QUEM SOMOS</span>
+                    <h2 className="font-heading tracking-tight text-3xl font-bold text-preto-hut8 mt-2 mb-4">Trazemos o mercado de trabalho para dentro do meio acadêmico</h2>
+                    <p className="text-preto-hut8 text-base leading-[1.5]">Fundada em maio de 2014, a Hut8 é a empresa júnior dos cursos de Ciência e engenharia da computação, vinculada a Universidade Federal de Pelotas.</p>
+                    <p className="text-preto-hut8 text-base mt-4 leading-[1.5]">Sem fins lucrativos, somos constituídos por uma equipe de jovens universitários que buscam obter conhecimento e experiência de mercado além das grades curriculares.</p>
                     <div className="flex flex-col gap-8 py-8">
                         <div className="flex items-start gap-4">
-                            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#A4DE02]/20">
+                            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-verde-hut8/20">
                                 <IoCheckmarkCircle size={20} color="#A4DE02" />
                             </div>
                             <div className="flex flex-col gap-1">
-                                <h3 className="text-lg font-semibold text-[#1F2937]">Qualidade Garantida</h3>
-                                <p className="text-gray-500 text-sm">Processos supervisionados por Professores Doutores da UFPel.</p>
+                                <h3 className="font-heading tracking-tight text-lg font-semibold text-preto-hut8">Qualidade Garantida</h3>
+                                <p className="text-preto-hut8 text-sm leading-[1.5]">Processos supervisionados por Professores Doutores da UFPel.</p>
                             </div>
                         </div>
                         <div className="flex items-start gap-4">
-                            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#A4DE02]/20">
+                            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-verde-hut8/20">
                                 <RiMoneyDollarCircleFill size={20} color="#A4DE02" />
                             </div>
                             <div className="flex flex-col gap-1">
-                                <h3 className="text-lg font-semibold text-[#1F2937]">Custo-Benefício</h3>
-                                <p className="text-gray-500 text-sm">Valores acessíveis e investimento no futuro da tecnologia</p>
+                                <h3 className="font-heading tracking-tight text-lg font-semibold text-preto-hut8">Custo-Benefício</h3>
+                                <p className="text-preto-hut8 text-sm leading-[1.5]">Valores acessíveis e investimento no futuro da tecnologia</p>
                             </div>
                         </div>
                     </div>

@@ -164,7 +164,7 @@ function Cards({ pessoa }) {
       <div className="overflow-hidden rounded-sm bg-slate-100">
         <img
           src={images[pessoa.image]}
-          alt={`Foto de ${pessoa.name}, ${pessoa.role} na Hut 8 Jr.`}
+          alt={`Foto de ${pessoa.name}, ${pessoa.role} na Hut8`}
           width={160}
           height={128}
           loading="lazy"
@@ -174,10 +174,10 @@ function Cards({ pessoa }) {
       </div>
 
       <div className="pt-3">
-        <h3 className="text-[11px] font-bold leading-tight text-slate-900">
+        <h3 className="font-heading tracking-tight text-[11px] font-bold leading-tight text-slate-900">
           {pessoa.name}
         </h3>
-        <p className="mt-1 text-[11px] font-medium text-slate-600">
+        <p className="mt-1 text-[11px] font-medium text-preto-hut8 leading-[1.5]">
           {pessoa.role}
         </p>
 
@@ -225,10 +225,10 @@ export default function DevsDesignersSection() {
       <section className="relative mx-auto max-w-6xl">
         <header className="flex items-center gap-6 mb-10">
           <div>
-            <h2 className="text-2xl font-extrabold tracking-tight text-[#6b0f9c] sm:text-3xl">
+            <h2 className="font-heading tracking-tight text-2xl font-extrabold text-roxo-hut8 sm:text-3xl">
               Desenvolvedores & Designers
             </h2>
-            <p className="mt-1 text-xs font-medium text-slate-600 sm:text-xs">
+            <p className="mt-1 text-xs font-medium text-preto-hut8 sm:text-xs leading-[1.5]">
               A força criativa por trás de cada linha de código.
             </p>
           </div>

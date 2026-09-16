@@ -4,8 +4,8 @@ import { getWhatsAppLink } from "../data/contactConfig.js";
 export default function SectionCTA({
   titlePrefix = "Pronto para tirar sua",
   titleHighlight = "ideia do papel?",
-  orcamentoMsg = "Olá! Gostaria de solicitar um orçamento para os serviços da Hut 8.",
-  consultorMsg = "Olá! Gostaria de falar com um consultor da Hut 8.",
+  orcamentoMsg = "Olá! Gostaria de solicitar um orçamento para os serviços da Hut8.",
+  consultorMsg = "Olá! Gostaria de falar com um consultor da Hut8.",
 }) {
   return (
     <section className="px-6 sm:px-10 mt-6 mb-40">
@@ -15,12 +15,12 @@ export default function SectionCTA({
         <div aria-hidden="true" className="absolute bottom-5 left-5 h-60 w-60 rounded-full bg-[#CAFF6F1A] blur-2xl pointer-events-none" />
 
         <div className="relative max-w-2xl mx-auto text-center">
-          <h2 className="text-white font-bold text-3xl md:text-5xl">
+          <h2 className="font-heading tracking-tight text-white font-bold text-3xl md:text-5xl">
             {titlePrefix}{" "}
             <span className="whitespace-nowrap">{titleHighlight}</span>
           </h2>
 
-          <p className="mt-6 mx-auto text-lg text-[#FFFFFF99]">
+          <p className="mt-6 mx-auto text-lg text-[#FFFFFF99] leading-[1.5]">
             Seja você uma startup em crescimento ou uma empresa consolidada buscando inovação, 
             nossa equipe está pronta para construir o futuro com você.
           </p>

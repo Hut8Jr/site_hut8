@@ -67,26 +67,26 @@ const Footer = () => {
   }, [activeModal]);
 
   return (
-    <footer className="bg-[#F9FAFB] w-full pt-16 pb-8 border-t border-[#E5E7EB]">
+    <footer className="bg-cinza-fundo w-full pt-16 pb-8 border-t border-[#E5E7EB]">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         {/* Grid Principal do Footer */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Coluna 1: Logo e Sobre */}
           <div className="flex flex-col gap-3">
             <Link to="/" className="flex items-center gap-3 w-fit" aria-label="Hut8 - Página Inicial">
-              <div className="bg-[#A4DE02] rounded-full p-2">
+              <div className="bg-verde-hut8 rounded-full p-2">
                 <img
                   src={logoHut}
-                  alt="Hut 8 Jr. Logo"
+                  alt="Hut8 Logo"
                   width={24}
                   height={24}
                   className="w-6 h-6 object-contain"
                 />
               </div>
-              <span className="text-[#6B0F9C] font-bold text-2xl">Hut8</span>
+              <span className="text-roxo-hut8 font-bold text-2xl">Hut8</span>
             </Link>
             <div>
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <p className="text-preto-hut8 text-sm leading-[1.5]">
                 Empresa Júnior de Computação da UFPel. Projetando o futuro com
                 tecnologia e inovação.
               </p>
@@ -96,8 +96,8 @@ const Footer = () => {
                 href="https://www.facebook.com/hutEight"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Facebook da Hut 8 Jr."
-                className="text-gray-600 hover:text-purple-800 transition-colors p-1"
+                aria-label="Facebook da Hut8"
+                className="text-preto-hut8 hover:text-purple-800 transition-colors p-1"
               >
                 <FiFacebook size={20} />
               </a>
@@ -105,8 +105,8 @@ const Footer = () => {
                 href="https://www.instagram.com/hut8_jr/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Instagram da Hut 8 Jr."
-                className="text-gray-600 hover:text-purple-800 transition-colors p-1"
+                aria-label="Instagram da Hut8"
+                className="text-preto-hut8 hover:text-purple-800 transition-colors p-1"
               >
                 <FiInstagram size={20} />
               </a>
@@ -114,8 +114,8 @@ const Footer = () => {
                 href="https://www.linkedin.com/company/hut8/posts/?feedView=all"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="LinkedIn da Hut 8 Jr."
-                className="text-gray-600 hover:text-purple-800 transition-colors p-1"
+                aria-label="LinkedIn da Hut8"
+                className="text-preto-hut8 hover:text-purple-800 transition-colors p-1"
               >
                 <FiLinkedin size={20} />
               </a>
@@ -125,7 +125,7 @@ const Footer = () => {
           {/* Coluna 2: Links Rápidos */}
           <div className="flex flex-col gap-6">
             <div>
-              <h3 className="text-[#1F2937] text-lg font-bold">
+              <h3 className="font-heading tracking-tight text-preto-hut8 text-lg font-bold">
                 Links Rápidos
               </h3>
             </div>
@@ -137,7 +137,7 @@ const Footer = () => {
                     <li key={index}>
                       <Link
                         to={to}
-                        className="text-left text-gray-600 hover:text-purple-800 transition-colors text-sm cursor-pointer focus-visible:ring-2 focus-visible:ring-[#6B0F9C] focus-visible:outline-none"
+                        className="text-left text-preto-hut8 hover:text-purple-800 transition-colors text-sm cursor-pointer focus-visible:ring-2 focus-visible:ring-roxo-hut8 focus-visible:outline-none"
                       >
                         {link.name}
                       </Link>
@@ -151,7 +151,7 @@ const Footer = () => {
           {/* Coluna 3: Serviços */}
           <div className="flex flex-col gap-6">
             <div>
-              <h3 className="text-[#1F2937] text-lg font-bold">Serviços</h3>
+              <h3 className="font-heading tracking-tight text-preto-hut8 text-lg font-bold">Serviços</h3>
             </div>
             <nav aria-label="Serviços do Rodapé">
               <ul className="flex flex-col gap-2">
@@ -159,7 +159,7 @@ const Footer = () => {
                   <li key={index}>
                     <Link
                       to={`/servicos#${link.targetId}`}
-                      className="text-left text-gray-600 hover:text-purple-800 transition-colors text-sm cursor-pointer focus-visible:ring-2 focus-visible:ring-[#6B0F9C] focus-visible:outline-none"
+                      className="text-left text-preto-hut8 hover:text-purple-800 transition-colors text-sm cursor-pointer focus-visible:ring-2 focus-visible:ring-roxo-hut8 focus-visible:outline-none"
                     >
                       {link.name}
                     </Link>
@@ -172,7 +172,7 @@ const Footer = () => {
           {/* Coluna 4: Contato */}
           <div className="flex flex-col gap-6">
             <div>
-              <h3 className="text-[#1F2937] text-lg font-bold">Contato</h3>
+              <h3 className="font-heading tracking-tight text-preto-hut8 text-lg font-bold">Contato</h3>
             </div>
             <div>
               <ul className="flex flex-col gap-5">
@@ -188,7 +188,7 @@ const Footer = () => {
                     <li key={index}>
                       <a
                         href={item.url}
-                        className="flex items-center gap-2 text-gray-600 hover:text-purple-800 transition-colors focus-visible:ring-2 focus-visible:ring-[#6B0F9C] focus-visible:outline-none"
+                        className="flex items-center gap-2 text-preto-hut8 hover:text-purple-800 transition-colors focus-visible:ring-2 focus-visible:ring-roxo-hut8 focus-visible:outline-none"
                       >
                         <Icon size={iconSize} className="text-[#3f6212] shrink-0" />
                         {item.name}
@@ -202,7 +202,7 @@ const Footer = () => {
         </div>
 
         {/* Barra Inferior (Copyright e Termos) */}
-        <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-200 text-xs text-gray-500">
+        <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-200 text-xs text-preto-hut8">
           <p>
             © {new Date().getFullYear()} Hut8 Empresa Júnior. Todos os direitos
             reservados.
@@ -211,14 +211,14 @@ const Footer = () => {
             <button
               type="button"
               onClick={(e) => openModal("privacidade", e.currentTarget)}
-              className="text-gray-500 hover:text-purple-800 transition-colors cursor-pointer underline-offset-2 hover:underline focus-visible:ring-2 focus-visible:ring-[#6B0F9C] focus-visible:outline-none rounded px-1"
+              className="text-preto-hut8 hover:text-purple-800 transition-colors cursor-pointer underline-offset-2 hover:underline focus-visible:ring-2 focus-visible:ring-roxo-hut8 focus-visible:outline-none rounded px-1"
             >
               Política de Privacidade
             </button>
             <button
               type="button"
               onClick={(e) => openModal("termos", e.currentTarget)}
-              className="text-gray-500 hover:text-purple-800 transition-colors cursor-pointer underline-offset-2 hover:underline focus-visible:ring-2 focus-visible:ring-[#6B0F9C] focus-visible:outline-none rounded px-1"
+              className="text-preto-hut8 hover:text-purple-800 transition-colors cursor-pointer underline-offset-2 hover:underline focus-visible:ring-2 focus-visible:ring-roxo-hut8 focus-visible:outline-none rounded px-1"
             >
               Termos de Uso
             </button>
@@ -244,7 +244,7 @@ const Footer = () => {
             className="relative z-10 w-full max-w-lg rounded-2xl bg-white p-6 shadow-2xl border border-gray-100 animate-in fade-in zoom-in duration-200"
           >
             <div className="flex items-center justify-between pb-4 border-b border-gray-200">
-              <h3 id="footer-modal-title" className="text-lg font-bold text-[#6B0F9C]">
+              <h3 id="footer-modal-title" className="font-heading tracking-tight text-lg font-bold text-roxo-hut8">
                 {activeModal === "privacidade"
                   ? "Política de Privacidade (LGPD)"
                   : "Termos de Uso Institucional"}
@@ -253,18 +253,18 @@ const Footer = () => {
                 type="button"
                 onClick={closeModal}
                 aria-label="Fechar janela"
-                className="flex items-center justify-center min-w-[32px] min-h-[32px] rounded-full p-1 text-gray-600 hover:bg-gray-100 hover:text-gray-900 transition-colors focus-visible:ring-2 focus-visible:ring-[#6B0F9C] focus-visible:outline-none cursor-pointer"
+                className="flex items-center justify-center min-w-[32px] min-h-[32px] rounded-full p-1 text-preto-hut8 hover:bg-gray-100 transition-colors focus-visible:ring-2 focus-visible:ring-roxo-hut8 focus-visible:outline-none cursor-pointer"
               >
                 ✕
               </button>
             </div>
-            <div className="mt-4 text-sm text-gray-600 leading-relaxed max-h-[60vh] overflow-y-auto pr-1">
+            <div className="mt-4 text-sm text-preto-hut8 leading-relaxed max-h-[60vh] overflow-y-auto pr-1">
               {activeModal === "privacidade" ? (
                 <>
-                  <p className="mb-3">
+                  <p className="mb-3 leading-[1.5]">
                     A <strong>Hut 8 Jr.</strong>, Empresa Júnior do Curso de Ciência da Computação da Universidade Federal de Pelotas (UFPel), preza pela transparência e privacidade dos seus dados em conformidade com a <strong>LGPD (Lei nº 13.709/2018)</strong>.
                   </p>
-                  <p className="mb-3">
+                  <p className="mb-3 leading-[1.5]">
                     Não coletamos dados pessoais sem seu expresso consentimento. Qualquer dado fornecido por meio de nossos canais de contato (WhatsApp ou e-mail institucional) é utilizado exclusivamente para atendimento ao cliente e elaboração de propostas comerciais de serviços.
                   </p>
                   <p>
@@ -273,10 +273,10 @@ const Footer = () => {
                 </>
               ) : (
                 <>
-                  <p className="mb-3">
+                  <p className="mb-3 leading-[1.5]">
                     O website da <strong>Hut 8 Jr.</strong> destina-se à divulgação institucional dos serviços e projetos desenvolvidos por discentes da Universidade Federal de Pelotas sob mentoria de professores orientadores do CDTec/UFPel.
                   </p>
-                  <p className="mb-3">
+                  <p className="mb-3 leading-[1.5]">
                     Todo o conteúdo, marcas, logotipos e códigos apresentados são de propriedade intelectual da Hut 8 Jr. ou de seus respectivos parceiros e clientes conveniados.
                   </p>
                   <p>
@@ -289,7 +289,7 @@ const Footer = () => {
               <button
                 type="button"
                 onClick={closeModal}
-                className="bg-[#6B0F9C] hover:bg-[#520a77] text-white font-medium text-sm px-5 py-2.5 rounded-xl cursor-pointer transition-colors focus-visible:ring-2 focus-visible:ring-[#6B0F9C] focus-visible:outline-none"
+                className="bg-roxo-hut8 hover:bg-[#520a77] text-white font-medium text-sm px-5 py-2.5 rounded-xl cursor-pointer transition-colors focus-visible:ring-2 focus-visible:ring-roxo-hut8 focus-visible:outline-none"
               >
                 Entendi e Fechar
               </button>

@@ -95,7 +95,7 @@ const WhatsAppButton = ({ showForm, setShowForm }) => {
           nunca cobrir o botão nem o formulário ao abrir pelo "Fale Conosco" */}
       <div className="fixed right-4 top-1/2 -translate-y-1/2 z-[300]">
         
-        {/* BOTÃO PRINCIPAL COM CONTRASTE AAA (#075E54 = 7.67:1 sobre #FFFFFF / 7.34:1 sobre #F9FAFB) */}
+        {/* BOTÃO PRINCIPAL COM CONTRASTE AAA (#075E54 = 7.67:1 sobre #FFFFFF / 7.34:1 sobre #F4F4F4) */}
         <button
           ref={triggerBtnRef}
           onClick={() => setShowForm(!showForm)}
@@ -125,15 +125,15 @@ const WhatsAppButton = ({ showForm, setShowForm }) => {
             role="dialog" 
             aria-modal="true" 
             aria-labelledby="modal-contato-titulo"
-            className="absolute top-full mt-4 right-0 bg-white w-80 [@media(max-height:700px)]:w-[450px] rounded-2xl shadow-2xl p-6 max-h-[85vh] overflow-y-auto origin-top-right z-[310] border border-gray-100"
+            className="absolute top-1/2 -translate-y-1/2 right-0 bg-white w-[calc(100vw-2rem)] max-w-sm rounded-2xl shadow-2xl p-6 max-h-[calc(100svh-2rem)] overflow-y-auto origin-top-right z-[310] border border-gray-100"
           >
             <div className="flex justify-between items-center mb-4">
-              <h3 id="modal-contato-titulo" className="font-bold text-gray-800 text-lg">Contato Hut 8 Jr.</h3>
+              <h3 id="modal-contato-titulo" className="font-heading tracking-tight font-bold text-preto-hut8 text-lg">Contato Hut8</h3>
               <button
                 type="button"
                 onClick={() => setShowForm(false)}
                 aria-label="Fechar diálogo de contato"
-                className="text-gray-600 hover:text-gray-900 cursor-pointer p-1 rounded-lg focus-visible:ring-2 focus-visible:ring-[#075E54] focus-visible:outline-none"
+                className="text-preto-hut8 hover:bg-gray-100 cursor-pointer p-1 rounded-lg focus-visible:ring-2 focus-visible:ring-[#075E54] focus-visible:outline-none"
               >
                 <svg aria-hidden="true" className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
@@ -150,7 +150,7 @@ const WhatsAppButton = ({ showForm, setShowForm }) => {
                   name="nomeUsuario"
                   required
                   placeholder="Ex: Ana Silva"
-                  className="w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-[#075E54] text-gray-900 placeholder:text-gray-600 text-sm"
+                  className="w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-[#075E54] text-preto-hut8 placeholder:text-[#595959] text-sm"
                 />
               </div>
               <div>
@@ -159,7 +159,7 @@ const WhatsAppButton = ({ showForm, setShowForm }) => {
                   id="nomeEmpresa"
                   name="nomeEmpresa"
                   placeholder="Ex: Minha Empresa Ltda."
-                  className="w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-[#075E54] text-gray-900 placeholder:text-gray-600 text-sm"
+                  className="w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-[#075E54] text-preto-hut8 placeholder:text-[#595959] text-sm"
                 />
               </div>
               <div>
@@ -169,7 +169,7 @@ const WhatsAppButton = ({ showForm, setShowForm }) => {
                   name="motivoContato"
                   required
                   placeholder="Ex: Orçamento de Site ou App"
-                  className="w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-[#075E54] text-gray-900 placeholder:text-gray-600 text-sm"
+                  className="w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-[#075E54] text-preto-hut8 placeholder:text-[#595959] text-sm"
                 />
               </div>
               <div>
@@ -180,7 +180,7 @@ const WhatsAppButton = ({ showForm, setShowForm }) => {
                   type="email"
                   required
                   placeholder="Ex: contato@empresa.com"
-                  className="w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-[#075E54] text-gray-900 placeholder:text-gray-600 text-sm"
+                  className="w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-[#075E54] text-preto-hut8 placeholder:text-[#595959] text-sm"
                 />
               </div>
               <div>
@@ -190,7 +190,7 @@ const WhatsAppButton = ({ showForm, setShowForm }) => {
                   name="mensagem"
                   required
                   placeholder="Descreva seu projeto ou objetivo..."
-                  className="w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-xl h-20 resize-none outline-none focus:ring-2 focus:ring-[#075E54] text-gray-900 placeholder:text-gray-600 text-sm"
+                  className="w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-xl h-20 resize-none outline-none focus:ring-2 focus:ring-[#075E54] text-preto-hut8 placeholder:text-[#595959] text-sm"
                 />
               </div>
               <button 
@@ -199,7 +199,7 @@ const WhatsAppButton = ({ showForm, setShowForm }) => {
               >
                 Enviar mensagem via WhatsApp
               </button>
-              <p className="text-[11px] text-gray-500 text-center mt-1">
+              <p className="text-[11px] text-preto-hut8 text-center mt-1 leading-[1.5]">
                 Seus dados são protegidos e utilizados exclusivamente para retorno de contato comercial (LGPD).
               </p>
             </form>

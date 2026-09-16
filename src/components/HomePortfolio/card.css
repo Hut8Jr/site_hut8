@@ -45,7 +45,7 @@
 
 /*ESTILO TÍTULO DOS CARDS*/
   .estilo-titulo-card {
-    color: #1F2937;
+    color: var(--color-preto-hut8);
     font-weight: 700;   
     font-size: 20px;
     line-height: 28px;
@@ -55,10 +55,10 @@
 
 /* ESTILO TEXTOS DE DENTRO DOS CARDS */
   .estilo-texto-card {
-    color: #4B5563;
+    color: var(--color-preto-hut8);
     font-weight: 400; 
     font-size: 16px;
-    line-height: 23px;
+    line-height: 1.5;
     text-align: center;
     max-width: 296px;
     margin-left: auto; 
@@ -68,7 +68,7 @@
 /*ESTILO LINK DOS CARDS*/
   .link-saiba-mais {
     position: relative;
-    color: #6B0F9C;
+    color: var(--color-roxo-hut8);
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
@@ -89,7 +89,7 @@
         bottom: -4px;
         width: 0;
         height: 2px;
-        background-color: #6B0F9C;
+        background-color: var(--color-roxo-hut8);
         transition: width 300ms ease;
       }
     }

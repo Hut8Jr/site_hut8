@@ -10,8 +10,8 @@ const ROUTES = [
     path: "/",
     outDir: DIST_DIR,
     outFile: path.join(DIST_DIR, "index.html"),
-    title: "Hut 8 Jr. | Empresa Júnior de Computação - UFPel",
-    description: "Hut 8 Jr. é a Empresa Júnior de Computação da UFPel. Desenvolvemos sites, aplicativos mobile e sistemas sob medida com excelência técnica em Pelotas e região.",
+    title: "Hut8 | Empresa Júnior de Computação - UFPel",
+    description: "Hut8 é a Empresa Júnior de Computação da UFPel. Desenvolvemos sites, aplicativos mobile e sistemas sob medida com excelência técnica em Pelotas e região.",
     canonical: `${BASE_URL}/`,
     robots: "index, follow",
     breadcrumb: [
@@ -25,7 +25,7 @@ const ROUTES = [
       <main>
         <section>
           <h2>Soluções Digitais de Alto Impacto Desenvolvidas na UFPel</h2>
-          <p>A Hut 8 Jr. é a Empresa Júnior de Computação da Universidade Federal de Pelotas. Desenvolvemos plataformas web modernas, aplicativos mobile e soluções sob medida com excelência técnica e rigor acadêmico para empresas de Pelotas, Rio Grande do Sul e todo o Brasil.</p>
+          <p>A Hut8 é a Empresa Júnior de Computação da Universidade Federal de Pelotas. Desenvolvemos plataformas web modernas, aplicativos mobile e soluções sob medida com excelência técnica e rigor acadêmico para empresas de Pelotas, Rio Grande do Sul e todo o Brasil.</p>
         </section>
         <section>
           <h2>Nossos Serviços Especializados</h2>
@@ -50,7 +50,7 @@ const ROUTES = [
     path: "/servicos",
     outDir: path.join(DIST_DIR, "servicos"),
     outFile: path.join(DIST_DIR, "servicos", "index.html"),
-    title: "Serviços de Tecnologia e Software | Hut 8 Jr. - UFPel",
+    title: "Serviços de Tecnologia e Software | Hut8 - UFPel",
     description: "Desenvolvimento web moderno, aplicativos mobile nativos e híbridos, sistemas personalizados e consultoria técnica pela Empresa Júnior da UFPel.",
     canonical: `${BASE_URL}/servicos`,
     robots: "index, follow",
@@ -61,36 +61,36 @@ const ROUTES = [
     structuredData: {
       "@context": "https://schema.org",
       "@type": "ItemList",
-      "name": "Serviços da Hut 8 Jr.",
-      "description": "Lista de serviços de tecnologia oferecidos pela Hut 8 Jr. da UFPel.",
+      "name": "Serviços da Hut8",
+      "description": "Lista de serviços de tecnologia oferecidos pela Hut8 da UFPel.",
       "itemListElement": [
         {
           "@type": "Service",
           "position": 1,
           "name": "Desenvolvimento de Plataformas Web",
           "description": "Sistemas web e landing pages modernas, responsivas e de alta performance.",
-          "provider": { "@type": "Organization", "name": "Hut 8 Jr." },
+          "provider": { "@type": "Organization", "name": "Hut8" },
         },
         {
           "@type": "Service",
           "position": 2,
           "name": "Desenvolvimento de Aplicativos Mobile",
           "description": "Aplicativos para Android e iOS intuitivos e escaláveis.",
-          "provider": { "@type": "Organization", "name": "Hut 8 Jr." },
+          "provider": { "@type": "Organization", "name": "Hut8" },
         },
         {
           "@type": "Service",
           "position": 3,
           "name": "Soluções em Software Personalizadas",
           "description": "Engenharia de software sob medida para automação e gestão empresarial.",
-          "provider": { "@type": "Organization", "name": "Hut 8 Jr." },
+          "provider": { "@type": "Organization", "name": "Hut8" },
         },
       ],
     },
     semanticContent: `
       <header><h1>Serviços Especializados em Tecnologia e Software</h1></header>
       <main>
-        <p>A Hut 8 Jr. é a Empresa Júnior de Computação da Universidade Federal de Pelotas (UFPel). Oferecemos desenvolvimento web, aplicativos móveis e sistemas sob medida com qualidade de nível profissional e preço acessível para empresas de Pelotas, Rio Grande do Sul e todo o Brasil.</p>
+        <p>A Hut8 é a Empresa Júnior de Computação da Universidade Federal de Pelotas (UFPel). Oferecemos desenvolvimento web, aplicativos móveis e sistemas sob medida com qualidade de nível profissional e preço acessível para empresas de Pelotas, Rio Grande do Sul e todo o Brasil.</p>
         <h2>Nossas Especialidades em Detalhes</h2>
         <section>
           <h3>Plataformas Web</h3>
@@ -111,8 +111,8 @@ const ROUTES = [
     path: "/projetos",
     outDir: path.join(DIST_DIR, "projetos"),
     outFile: path.join(DIST_DIR, "projetos", "index.html"),
-    title: "Portfólio de Projetos e Cases de Sucesso | Hut 8 Jr. - UFPel",
-    description: "Conheça os projetos entregues pela Hut 8 Jr.: sistemas agroindustriais, aplicativos mobile, plataformas inteligentes e produtos de alta tecnologia.",
+    title: "Portfólio de Projetos e Cases de Sucesso | Hut8 - UFPel",
+    description: "Conheça os projetos entregues pela Hut8: sistemas agroindustriais, aplicativos mobile, plataformas inteligentes e produtos de alta tecnologia.",
     canonical: `${BASE_URL}/projetos`,
     robots: "index, follow",
     breadcrumb: [
@@ -122,7 +122,7 @@ const ROUTES = [
     structuredData: {
       "@context": "https://schema.org",
       "@type": "ItemList",
-      "name": "Portfólio de Projetos da Hut 8 Jr.",
+      "name": "Portfólio de Projetos da Hut8",
       "itemListElement": [
         {
           "@type": "CreativeWork",
@@ -153,7 +153,7 @@ const ROUTES = [
     semanticContent: `
       <header><h1>Portfólio de Projetos e Soluções Tecnológicas</h1></header>
       <main>
-        <p>Casos de sucesso reais entregues pela Hut 8 Jr. para clientes em Pelotas e em todo o Brasil.</p>
+        <p>Casos de sucesso reais entregues pela Hut8 para clientes em Pelotas e em todo o Brasil.</p>
         <section>
           <h2>Pastejando</h2>
           <p>Plataforma para pecuária de precisão com monitoramento de pastejo rotacionado e métricas zootécnicas.</p>
@@ -177,8 +177,8 @@ const ROUTES = [
     path: "/equipe",
     outDir: path.join(DIST_DIR, "equipe"),
     outFile: path.join(DIST_DIR, "equipe", "index.html"),
-    title: "Nossa Equipe e Professores Orientadores | Hut 8 Jr. - UFPel",
-    description: "Conheça os jovens talentos universitários e professores doutores da UFPel que lideram e orientam as soluções inovadoras da Hut 8 Jr.",
+    title: "Nossa Equipe e Professores Orientadores | Hut8 - UFPel",
+    description: "Conheça os jovens talentos universitários e professores doutores da UFPel que lideram e orientam as soluções inovadoras da Hut8.",
     canonical: `${BASE_URL}/equipe`,
     robots: "index, follow",
     breadcrumb: [
@@ -226,8 +226,8 @@ const ROUTES = [
     path: "/404",
     outDir: DIST_DIR,
     outFile: path.join(DIST_DIR, "404.html"),
-    title: "Página Não Encontrada (404) | Hut 8 Jr. - UFPel",
-    description: "Página não encontrada no site oficial da Hut 8 Jr. - Empresa Júnior de Computação da UFPel.",
+    title: "Página Não Encontrada (404) | Hut8 - UFPel",
+    description: "Página não encontrada no site oficial da Hut8 - Empresa Júnior de Computação da UFPel.",
     canonical: `${BASE_URL}/`,
     robots: "noindex, nofollow",
     breadcrumb: [],
