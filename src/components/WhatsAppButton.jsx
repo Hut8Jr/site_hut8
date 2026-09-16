@@ -3,7 +3,7 @@ import whatsAppIcon from '../assets/WhatsAppButton/whatsAppIcon.svg';
 import { getWhatsAppLink } from '../data/contactConfig.js';
 
 const WhatsAppButton = ({ showForm, setShowForm }) => {
-  const triggerBtnRef = useRef(null);
+  const abridorRef = useRef(null);   // quem abriu o modal: devolve o foco a ele
   const modalRef = useRef(null);
   const firstInputRef = useRef(null);
   const isFirstMount = useRef(true);
@@ -15,13 +15,12 @@ const WhatsAppButton = ({ showForm, setShowForm }) => {
       return;
     }
     if (showForm) {
-      // Foca o primeiro input quando o modal abre
+      abridorRef.current = document.activeElement;
       setTimeout(() => {
         firstInputRef.current?.focus();
       }, 50);
     } else {
-      // Devolve foco ao botão de abertura quando fecha
-      triggerBtnRef.current?.focus();
+      abridorRef.current?.focus?.();
     }
   }, [showForm]);
 
@@ -83,49 +82,39 @@ const WhatsAppButton = ({ showForm, setShowForm }) => {
 
   return (
     <>
-      {showForm && (
-        <div 
-          aria-hidden="true"
-          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[250] animate-in fade-in duration-300"
-          onClick={() => setShowForm(false)}
-        />
-      )}
-
-      {/* Container acima do backdrop (z-[250]) para o blur/escurecimento
-          nunca cobrir o botão nem o formulário ao abrir pelo "Fale Conosco" */}
-      <div className="fixed right-4 top-1/2 -translate-y-1/2 z-[300]">
-        
-        {/* BOTÃO PRINCIPAL COM CONTRASTE AAA (#075E54 = 7.67:1 sobre #FFFFFF / 7.34:1 sobre #F4F4F4) */}
-        <button
-          ref={triggerBtnRef}
-          onClick={() => setShowForm(!showForm)}
-          className={`h-14 bg-[#075E54] rounded-full shadow-2xl flex items-center 
-                    transition-all duration-300 ease-in-out overflow-hidden border-none cursor-pointer group
-                    ${showForm ? 'w-44' : 'w-14 hover:w-44'}
-                    focus-visible:ring-4 focus-visible:ring-[#075E54]/40 focus-visible:outline-none`}
+      {/* Botao flutuante: link DIRETO para o WhatsApp, sem formulario.
+          Canto inferior direito, discreto (48px, sem expansao no hover).
+          #075E54 = 7,67:1 sobre branco. */}
+      <div className="fixed bottom-6 right-6 z-[240]">
+        <a
+          href={getWhatsAppLink("Ola! Vim pelo site da Hut8 e gostaria de falar com voces.")}
+          target="_blank"
+          rel="noopener noreferrer"
           aria-label="Conversar no WhatsApp"
-          aria-expanded={showForm}
-          aria-controls="modal-contato"
+          className="flex h-12 w-12 items-center justify-center rounded-full bg-[#075E54] shadow-lg
+                     transition hover:bg-[#054c44] hover:scale-105
+                     focus-visible:ring-2 focus-visible:ring-[#075E54] focus-visible:ring-offset-2 focus-visible:outline-none"
         >
-          <div className="min-w-[56px] h-14 flex items-center justify-center">
-            <img src={whatsAppIcon} alt="" aria-hidden="true" width={32} height={32} className="w-8 h-8 object-contain" />
-          </div>
+          <img src={whatsAppIcon} alt="" aria-hidden="true" width={24} height={24} className="h-6 w-6 object-contain" />
+        </a>
+      </div>
 
-          <span className={`transition-opacity duration-300 pr-6 font-bold text-white whitespace-nowrap
-                          ${showForm ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}>
-            Fale conosco
-          </span>
-        </button>
-
-        {/* Formulário Modal com Focus Trap */}
-        {showForm && (
+        {/* Formulario do "Fale Conosco" do header. Overlay centrado: cabe em
+          qualquer altura de viewport sem depender de ancoragem. */}
+      {showForm && (
+        <div className="fixed inset-0 z-[300] flex items-center justify-center p-4">
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+            onClick={() => setShowForm(false)}
+          />
           <div 
             ref={modalRef}
             id="modal-contato"
             role="dialog" 
             aria-modal="true" 
             aria-labelledby="modal-contato-titulo"
-            className="absolute top-1/2 -translate-y-1/2 right-0 bg-white w-[calc(100vw-2rem)] max-w-sm rounded-2xl shadow-2xl p-6 max-h-[calc(100svh-2rem)] overflow-y-auto origin-top-right z-[310] border border-gray-100"
+            className="relative z-10 w-full max-w-sm max-h-[85svh] overflow-y-auto bg-white rounded-2xl shadow-2xl p-6 border border-gray-100"
           >
             <div className="flex justify-between items-center mb-4">
               <h3 id="modal-contato-titulo" className="font-heading tracking-tight font-bold text-preto-hut8 text-lg">Contato Hut8</h3>
@@ -204,8 +193,8 @@ const WhatsAppButton = ({ showForm, setShowForm }) => {
               </p>
             </form>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </>
   );
 };
