@@ -110,7 +110,7 @@ export default function EquipeSection2() {
         <div>
           {/* Título com linha divisória lateral */}
           <div className="flex items-center gap-6 mb-10">
-            <h2 className="text-[#6b0f9c] text-3xl font-extrabold whitespace-nowrap">
+            <h2 className="font-heading tracking-tight text-roxo-hut8 text-3xl font-extrabold whitespace-nowrap">
               Presidência
             </h2>
             <div className="h-px bg-gray-200 w-full"></div>
@@ -128,7 +128,7 @@ export default function EquipeSection2() {
                   {pessoa.image ? (
                     <img
                       src={galleryImages[pessoa.image]}
-                      alt={`Foto de ${pessoa.name}, ${pessoa.role} na Hut 8 Jr.`}
+                      alt={`Foto de ${pessoa.name}, ${pessoa.role} na Hut8`}
                       width={128}
                       height={128}
                       loading="lazy"
@@ -143,13 +143,13 @@ export default function EquipeSection2() {
                   )}
                 </div>
                 <div className="flex flex-col">
-                  <h3 className="text-gray-900 font-bold text-xl">
+                  <h3 className="font-heading tracking-tight text-preto-hut8 font-bold text-xl">
                     {pessoa.name}
                   </h3>
-                  <span className="text-[#6B0F9C] text-sm font-semibold mt-1">
+                  <span className="text-roxo-hut8 text-sm font-semibold mt-1">
                     {pessoa.role}
                   </span>
-                  <p className="text-gray-500 text-xs mt-3 leading-relaxed">
+                  <p className="text-preto-hut8 text-xs mt-3 leading-[1.5]">
                     {pessoa.description}
                   </p>
                   <div className="flex gap-4 mt-4 text-gray-400">
@@ -195,7 +195,7 @@ export default function EquipeSection2() {
         {/* PARTE INFERIOR: PROFESSORES */}
         <div className="mt-32">
           <div className="flex items-center gap-6 mb-10">
-            <h2 className="text-[#6b0f9c] text-3xl font-extrabold whitespace-nowrap">
+            <h2 className="font-heading tracking-tight text-roxo-hut8 text-3xl font-extrabold whitespace-nowrap">
               Professores
             </h2>
             <div className="h-px bg-gray-200 w-full"></div>
@@ -211,7 +211,7 @@ export default function EquipeSection2() {
                   {professor.image ? (
                     <img
                       src={professoresImages[professor.image]}
-                      alt={`Foto do ${professor.name}, ${professor.role} na Hut 8 Jr.`}
+                      alt={`Foto do ${professor.name}, ${professor.role} na Hut8`}
                       width={128}
                       height={128}
                       loading="lazy"
@@ -227,13 +227,13 @@ export default function EquipeSection2() {
                 </div>
 
                 <div className="flex flex-col">
-                  <h3 className="text-gray-900 font-bold text-xl">
+                  <h3 className="font-heading tracking-tight text-preto-hut8 font-bold text-xl">
                     {professor.name}
                   </h3>
-                  <span className="text-[#6B0F9C] text-sm font-semibold mt-1">
+                  <span className="text-roxo-hut8 text-sm font-semibold mt-1">
                     {professor.role}
                   </span>
-                  <p className="text-gray-500 text-xs mt-3 leading-relaxed">
+                  <p className="text-preto-hut8 text-xs mt-3 leading-[1.5]">
                     {professor.description}
                   </p>
 

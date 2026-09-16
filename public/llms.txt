@@ -1,4 +1,4 @@
-# Hut 8 Jr. — Empresa Júnior de Computação da UFPel
+# Hut8 — Empresa Júnior de Computação da UFPel
 
 > Empresa Júnior dos Cursos de Ciência da Computação e Engenharia de Computação da Universidade Federal de Pelotas (UFPel). Desenvolvemos soluções em software, aplicativos mobile e plataformas web com excelência acadêmica e compromisso profissional em Pelotas e região.
 

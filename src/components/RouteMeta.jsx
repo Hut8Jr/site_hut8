@@ -5,26 +5,26 @@ const SITE_URL = (import.meta.env.VITE_SITE_URL || "https://hut8.com.br").replac
 
 const ROUTE_METADATA = {
   "/": {
-    title: "Hut 8 Jr. | Empresa Júnior de Computação - UFPel",
-    description: "Hut 8 Jr. é a Empresa Júnior de Computação da UFPel. Desenvolvemos sites, aplicativos mobile e sistemas sob medida com excelência técnica em Pelotas e região.",
+    title: "Hut8 | Empresa Júnior de Computação - UFPel",
+    description: "Hut8 é a Empresa Júnior de Computação da UFPel. Desenvolvemos sites, aplicativos mobile e sistemas sob medida com excelência técnica em Pelotas e região.",
     canonical: `${SITE_URL}/`,
     robots: "index, follow",
   },
   "/servicos": {
-    title: "Serviços de Tecnologia e Software | Hut 8 Jr. - UFPel",
+    title: "Serviços de Tecnologia e Software | Hut8 - UFPel",
     description: "Desenvolvimento web moderno, aplicativos mobile nativos e híbridos, sistemas personalizados e consultoria técnica pela Empresa Júnior da UFPel.",
     canonical: `${SITE_URL}/servicos`,
     robots: "index, follow",
   },
   "/projetos": {
-    title: "Portfólio de Projetos e Cases de Sucesso | Hut 8 Jr. - UFPel",
-    description: "Conheça os projetos entregues pela Hut 8 Jr.: sistemas agroindustriais, aplicativos mobile, plataformas inteligentes e produtos de alta tecnologia.",
+    title: "Portfólio de Projetos e Cases de Sucesso | Hut8 - UFPel",
+    description: "Conheça os projetos entregues pela Hut8: sistemas agroindustriais, aplicativos mobile, plataformas inteligentes e produtos de alta tecnologia.",
     canonical: `${SITE_URL}/projetos`,
     robots: "index, follow",
   },
   "/equipe": {
-    title: "Nossa Equipe e Professores Orientadores | Hut 8 Jr. - UFPel",
-    description: "Conheça os jovens talentos universitários e professores doutores da UFPel que lideram e orientam as soluções inovadoras da Hut 8 Jr.",
+    title: "Nossa Equipe e Professores Orientadores | Hut8 - UFPel",
+    description: "Conheça os jovens talentos universitários e professores doutores da UFPel que lideram e orientam as soluções inovadoras da Hut8.",
     canonical: `${SITE_URL}/equipe`,
     robots: "index, follow",
   },
@@ -70,8 +70,8 @@ export default function RouteMeta() {
   useEffect(() => {
     const isKnownRoute = Boolean(ROUTE_METADATA[pathname]);
     const meta = isKnownRoute ? ROUTE_METADATA[pathname] : {
-      title: "Página Não Encontrada | Hut 8 Jr.",
-      description: "Página não encontrada no site oficial da Hut 8 Jr. - Empresa Júnior de Computação da UFPel.",
+      title: "Página Não Encontrada | Hut8",
+      description: "Página não encontrada no site oficial da Hut8 - Empresa Júnior de Computação da UFPel.",
       canonical: `${SITE_URL}/`,
       robots: "noindex, nofollow",
     };

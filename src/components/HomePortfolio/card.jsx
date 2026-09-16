@@ -9,9 +9,9 @@ export function Card({ icone, titulo, descricao, corFundoIcone, aoClicar}) {
         <img src={icone} alt="" aria-hidden="true" width={32} height={32} />
       </div>
 
-      <h3 className="estilo-titulo-card">{titulo}</h3>
+      <h3 className="font-heading tracking-tight estilo-titulo-card">{titulo}</h3>
 
-      <p className="estilo-texto-card">
+      <p className="estilo-texto-card leading-[1.5]">
         {descricao}
       </p>
 
