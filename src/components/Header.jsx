@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import logoHut from '../assets/Header/hut.svg';
+import simboloHut8 from '../assets/Marca/hut8-simbolo-preto.png';
 
 export default function Header({ setShowForm }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -79,15 +79,18 @@ export default function Header({ setShowForm }) {
             </a>
 
             <div className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center gap-4">
-                <Link to="/" className="flex items-center group" aria-label="Hut8 - Página Inicial">
-                    <img 
-                        src={logoHut} 
-                        alt="Hut8 Logo"
-                        width="60"
+                <Link to="/" className="flex items-center gap-3 group" aria-label="Hut8 - Página Inicial">
+                    {/* Assinatura horizontal: simbolo a esquerda, nome a direita.
+                        Proporcao nativa 3:4 (45x60) e distancia 0,2 x altura = 12px (gap-3). */}
+                    <img
+                        src={simboloHut8}
+                        alt=""
+                        aria-hidden="true"
+                        width="45"
                         height="60"
-                        className="w-15 h-15 drop-shadow-[0_5px_7px_rgba(132,204,22,0.3)]"
+                        className="w-[45px] h-[60px]"
                     />
-                    <span className="text-purple-800 text-2xl font-bold">Hut8</span>
+                    <span className="font-heading font-bold text-2xl tracking-tight text-preto-hut8">Hut8</span>
                 </Link>
                 
                 {/* Botão Mobile (Hambúrguer) visível apenas em telas menores */}

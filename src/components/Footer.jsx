@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { footerLinks } from "../data/footerData";
-import logoHut from "../assets/Footer/logoHut.svg";
+import simboloHut8 from "../assets/Marca/hut8-simbolo-preto.png";
 import {
   FiInstagram,
   FiFacebook,
@@ -73,17 +73,18 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Coluna 1: Logo e Sobre */}
           <div className="flex flex-col gap-3">
-            <Link to="/" className="flex items-center gap-3 w-fit" aria-label="Hut8 - Página Inicial">
-              <div className="bg-verde-hut8 rounded-full p-2">
-                <img
-                  src={logoHut}
-                  alt="Hut8 Logo"
-                  width={24}
-                  height={24}
-                  className="w-6 h-6 object-contain"
-                />
-              </div>
-              <span className="text-roxo-hut8 font-bold text-2xl">Hut8</span>
+            <Link to="/" className="flex items-center gap-[6px] w-fit" aria-label="Hut8 - Página Inicial">
+              {/* Sem o circulo verde: o manual o tira de circulacao.
+                  Proporcao 3:4 (24x32), distancia 0,2 x 32 = 6px. */}
+              <img
+                src={simboloHut8}
+                alt=""
+                aria-hidden="true"
+                width={24}
+                height={32}
+                className="w-6 h-8"
+              />
+              <span className="font-heading font-bold text-2xl tracking-tight text-preto-hut8">Hut8</span>
             </Link>
             <div>
               <p className="text-preto-hut8 text-sm leading-[1.5]">
