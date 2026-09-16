@@ -6,7 +6,7 @@ const fontsDir = path.resolve("public/fonts");
 if (!fs.existsSync(fontsDir)) fs.mkdirSync(fontsDir, { recursive: true });
 
 const url =
-  "https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Plus+Jakarta+Sans:wght@500..800&display=swap";
+  "https://fonts.googleapis.com/css2?family=Archivo:wght@100..900&family=Instrument+Sans:wght@400..700&family=Martian+Mono:wght@100..800&display=swap";
 
 function fetchText(fetchUrl) {
   return new Promise((resolve, reject) => {

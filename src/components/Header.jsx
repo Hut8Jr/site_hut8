@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import logoHut from '../assets/Header/hut.svg';
+import simboloHut8 from '../assets/Marca/hut8-simbolo-preto.png';
 
 export default function Header({ setShowForm }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -54,12 +54,12 @@ export default function Header({ setShowForm }) {
 
     const navLinkClass = ({ isActive }) =>
         `font-medium transition-colors cursor-pointer ${
-            isActive ? 'text-purple-800 font-bold' : 'text-gray-600 hover:text-purple-800'
+            isActive ? 'text-purple-800 font-bold' : 'text-preto-hut8 hover:text-purple-800'
         }`;
 
     const mobileNavLinkClass = ({ isActive }) =>
         `text-xl font-medium w-full text-left transition-colors cursor-pointer ${
-            isActive ? 'text-purple-800 font-bold' : 'text-gray-600 hover:text-purple-800'
+            isActive ? 'text-purple-800 font-bold' : 'text-preto-hut8 hover:text-purple-800'
         }`;
 
     // Quando o menu mobile está aberto, esconde o botão flutuante do WhatsApp
@@ -73,28 +73,31 @@ export default function Header({ setShowForm }) {
             {/* Skip link para acessibilidade */}
             <a 
                 href="#main-content" 
-                className="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:top-2 focus:left-2 focus:p-3 focus:bg-[#6B0F9C] focus:text-white focus:rounded-lg focus:shadow-lg focus:outline-none font-semibold text-sm"
+                className="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:top-2 focus:left-2 focus:p-3 focus:bg-roxo-hut8 focus:text-white focus:rounded-lg focus:shadow-lg focus:outline-none font-semibold text-sm"
             >
                 Pular para o conteúdo principal
             </a>
 
-            <div className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center gap-4">
-                <Link to="/" className="flex items-center group" aria-label="Hut8 - Página Inicial">
-                    <img 
-                        src={logoHut} 
-                        alt="Hut 8 Jr. Logo" 
-                        width="60"
+            <div className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center gap-5 lg:gap-8">
+                <Link to="/" className="flex items-center gap-2 sm:gap-2.5 lg:gap-3 group" aria-label="Hut8 - Página Inicial">
+                    {/* Assinatura horizontal: simbolo a esquerda, nome a direita.
+                        Proporcao nativa 3:4 (45x60) e distancia 0,2 x altura = 12px (gap-3). */}
+                    <img
+                        src={simboloHut8}
+                        alt=""
+                        aria-hidden="true"
+                        width="45"
                         height="60"
-                        className="w-15 h-15 drop-shadow-[0_5px_7px_rgba(132,204,22,0.3)]"
+                        className="h-10 w-[30px] sm:h-12 sm:w-9 lg:h-15 lg:w-[45px]"
                     />
-                    <span className="text-purple-800 text-2xl font-bold">Hut8</span>
+                    <span className="font-heading font-bold text-xl sm:text-2xl tracking-tight text-preto-hut8">Hut8</span>
                 </Link>
                 
                 {/* Botão Mobile (Hambúrguer) visível apenas em telas menores */}
                 <button 
                     ref={hamburgerBtnRef}
                     type="button"
-                    className="md:hidden p-2 text-gray-600 focus-visible:ring-2 focus-visible:ring-[#6B0F9C] focus-visible:outline-none rounded-lg cursor-pointer"
+                    className="md:hidden p-2 text-preto-hut8 focus-visible:ring-2 focus-visible:ring-roxo-hut8 focus-visible:outline-none rounded-lg cursor-pointer"
                     onClick={() => setIsMenuOpen(true)}
                     aria-label="Abrir menu de navegação"
                     aria-expanded={isMenuOpen}
@@ -116,7 +119,7 @@ export default function Header({ setShowForm }) {
                     <button 
                         type="button"
                         onClick={() => { setShowForm(true); setIsMenuOpen(false); }} 
-                        className="bg-purple-800 text-white font-medium px-6 py-2 rounded-full shadow-lg shadow-purple-800/40 hover:bg-purple-900 focus-visible:ring-2 focus-visible:ring-[#6B0F9C] focus-visible:outline-none transition-colors cursor-pointer"
+                        className="bg-purple-800 text-white font-medium px-6 py-2 rounded-full shadow-lg shadow-purple-800/40 hover:bg-purple-900 focus-visible:ring-2 focus-visible:ring-roxo-hut8 focus-visible:outline-none transition-colors cursor-pointer"
                     >
                         Fale Conosco
                     </button>
@@ -149,7 +152,7 @@ export default function Header({ setShowForm }) {
                     <button 
                         type="button"
                         onClick={() => setIsMenuOpen(false)} 
-                        className="text-gray-600 cursor-pointer p-1 rounded-lg focus-visible:ring-2 focus-visible:ring-[#6B0F9C] focus-visible:outline-none"
+                        className="text-preto-hut8 cursor-pointer p-1 rounded-lg focus-visible:ring-2 focus-visible:ring-roxo-hut8 focus-visible:outline-none"
                         aria-label="Fechar menu de navegação"
                     >
                         <svg aria-hidden="true" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -168,7 +171,7 @@ export default function Header({ setShowForm }) {
                         <button 
                             type="button"
                             onClick={() => { setShowForm(true); setIsMenuOpen(false); }} 
-                            className="bg-purple-800 text-white font-medium w-full py-3 rounded-full shadow-lg hover:bg-purple-900 focus-visible:ring-2 focus-visible:ring-[#6B0F9C] focus-visible:outline-none transition-colors cursor-pointer"
+                            className="bg-purple-800 text-white font-medium w-full py-3 rounded-full shadow-lg hover:bg-purple-900 focus-visible:ring-2 focus-visible:ring-roxo-hut8 focus-visible:outline-none transition-colors cursor-pointer"
                         >
                             Fale Conosco
                         </button>

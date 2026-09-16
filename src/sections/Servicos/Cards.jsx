@@ -140,7 +140,7 @@ const Cards = () => {
 
   return (
     <section className="max-w-6xl mx-auto py-16 px-4" aria-labelledby="titulo-especialidades">
-      <h2 id="titulo-especialidades" className="text-3xl font-extrabold text-[#1F2937] text-center mb-12">
+      <h2 id="titulo-especialidades" className="font-heading tracking-tight text-3xl font-extrabold text-preto-hut8 text-center mb-12">
         Nossas Especialidades em Detalhes
       </h2>
       

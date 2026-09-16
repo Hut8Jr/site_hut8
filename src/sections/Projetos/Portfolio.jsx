@@ -12,7 +12,7 @@ import Trator from "../../assets/ProjetosPortfolio/trator-icon.svg";
 export default function Portfolio() {
   return (
     <section className="w-full max-w-[1710px] mx-auto px-4 py-10" aria-label="Portfólio de Projetos em Destaque">
-      <h2 className="sr-only">Projetos em Destaque</h2>
+      <h2 className="font-heading tracking-tight sr-only">Projetos em Destaque</h2>
       <div className="flex flex-wrap gap-[32px] w-full">
        
         {/* FILA 1: Toni (8/12) e Plante (4/12) */}

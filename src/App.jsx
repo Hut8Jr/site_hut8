@@ -5,6 +5,7 @@ import WhatsAppButton from "./components/WhatsAppButton.jsx";
 import Footer from "./components/Footer.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
 import RouteMeta from "./components/RouteMeta.jsx";
+import RouteTransition from "./components/RouteTransition.jsx";
 
 import HomePage from "./pages/Home.jsx";
 
@@ -35,13 +36,15 @@ function App() {
 
       <main id="main-content" className="grow">
         <Suspense fallback={<LoadingFallback />}>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/projetos" element={<ProjetosPage />} />
-            <Route path="/servicos" element={<ServicosPage />} />
-            <Route path="/equipe" element={<EquipePage />} />
-            <Route path="*" element={<NotFoundPage />} />
-          </Routes>
+          <RouteTransition>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/projetos" element={<ProjetosPage />} />
+              <Route path="/servicos" element={<ServicosPage />} />
+              <Route path="/equipe" element={<EquipePage />} />
+              <Route path="*" element={<NotFoundPage />} />
+            </Routes>
+          </RouteTransition>
         </Suspense>
       </main>
 

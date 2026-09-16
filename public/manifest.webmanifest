@@ -1,6 +1,6 @@
 {
-  "name": "Hut 8 Jr. - Empresa Júnior de Computação",
-  "short_name": "Hut 8 Jr.",
+  "name": "Hut8 - Empresa Júnior de Computação",
+  "short_name": "Hut8",
   "description": "Empresa Júnior de Computação da Universidade Federal de Pelotas (UFPel)",
   "start_url": "/",
   "display": "standalone",
@@ -9,20 +9,31 @@
   "lang": "pt-BR",
   "icons": [
     {
-      "src": "/favicon.svg",
+      "src": "/favicon.svg?v=2",
       "sizes": "any",
       "type": "image/svg+xml"
     },
     {
-      "src": "/apple-touch-icon.png",
+      "src": "/favicon-96.png?v=2",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png?v=2",
       "sizes": "180x180",
       "type": "image/png"
     },
     {
-      "src": "/logo.png",
+      "src": "/logo.png?v=2",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "/logo.png?v=2",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }

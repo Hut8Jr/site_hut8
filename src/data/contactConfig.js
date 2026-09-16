@@ -1,4 +1,4 @@
-// Configuração centralizada de contatos da Hut 8 Jr.
+// Configuração centralizada de contatos da Hut8
 
 export const CONTACT_INFO = {
   phoneRaw: "5551997467149",
